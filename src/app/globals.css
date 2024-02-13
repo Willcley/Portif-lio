@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .body {
+    @apply bg-gradient-to-b from-blue-900 from-10% to-grey-900 to-80% text-grey-100;
+  };
+};
