@@ -1,8 +1,5 @@
-import { FaReact, FaHtml5, FaSass } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io";
-import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
-import { SiZod, SiExpress } from "react-icons/si";
 import { TechCard } from "./TechCard";
+import { techList } from "../../databases/techList";
 import Link from "next/link";
 
 export const About = () => {
@@ -45,7 +42,7 @@ export const About = () => {
                             font-bold
                             rounded-lg
                             hover:bg-orange-500 hover:text-white
-                        " target="_blank" href="">
+                        " target="_blank" href="" hidden={true}>
                             Ver Projetos
                         </Link>
                         <Link className="
@@ -88,18 +85,9 @@ export const About = () => {
                         <ul className="
                             flex justify-center gap-2 flex-wrap
                         ">
-                            <TechCard
-                                icon={<FaReact size={40} />}
-                                title="React"
-                                link="https://react.dev"
-                            />
-                            <FaHtml5 title="HTML" size={40} />
-                            <IoLogoCss3 title="CSS" size={40} />
-                            <FaSass title="SASS" size={40} />
-                            <BiLogoJavascript title="JavaScript" size={40} />
-                            <BiLogoTypescript title="TypeScript" size={40} />
-                            <SiZod title="Zod" size={40} />
-                            <SiExpress title="Express" size={40} />
+                            {techList.length > 0 ? techList.map((tech) => (
+                                <TechCard tech={tech} key={tech.title} />
+                            )) : <p>Lista de tecnologias não encontrada!</p>}
                         </ul>
                     </div>
                 </div>

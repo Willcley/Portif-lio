@@ -31,7 +31,7 @@ export const Contact = () => {
                         iconStyle="bg-green-400"
                         title="Meu Celular"
                         description="Me envie uma mensagem pelo whatsapp, se deseja uma conversa mais casual"
-                        link=""
+                        link="https://w.app/willcleymelo"
                         linkText="Enviar Mensagem"
                     />
                     <ContactCard
@@ -39,7 +39,7 @@ export const Contact = () => {
                         iconStyle="bg-red-500"
                         title="Meu E-mail"
                         description="Me envie um e-mail, se deseja uma abordagem mais formal"
-                        link=""
+                        link="mailto:willcley2003@gmail.com?subject=Ol%C3%A1!%20Estava%20vendo%20seu%20portf%C3%B3lio.&body=Ol%C3%A1%2C%20Willcley!%20Estava%20dando%20uma%20olhada%20em%20seu%20portf%C3%B3lio%2C%20e%20gostaria%20de%20entrar%20em%20contato%20pra%20te%20conhecer%20um%20pouco%20mais."
                         linkText="Enviar E-mail"
                     />
                     <ContactCard

@@ -15,15 +15,15 @@ export const Header = () => {
                     flex justify-between items-center gap-8
                     text-grey-200
                 ">
-                    <button className="hover:text-orange-400">
+                    <a href="#about" className="hover:text-orange-400">
                         Sobre
-                    </button>
-                    <button className="hover:text-orange-400">
+                    </a>
+                    <a href="#projects" className="hover:text-orange-400">
                         Projetos
-                    </button>
-                    <button className="hover:text-orange-400">
+                    </a>
+                    <a href="#contact" className="hover:text-orange-400">
                         Contato
-                    </button>
+                    </a>
                 </nav>
             </div>
         </header>

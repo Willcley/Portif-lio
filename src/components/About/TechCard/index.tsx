@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-export const TechCard = ({ icon, title, link }: any) => {
+export const TechCard = ({ tech }: any) => {
     return (
-        <li title={title} className="
+        <li title={tech.title} className="
             cursor-pointer
             hover:text-blue-400
         ">
-            <Link target="_blank" href={link}>
-                {icon}
+            <Link target="_blank" href={tech.link}>
+                {tech.icon}
             </Link>
         </li>
     );
