@@ -17,7 +17,7 @@ export const ProjectCard = ({
     return (
         <li className="
             flex flex-col justify-between gap-4 p-4
-            rounded-lg
+            max-w-md rounded-lg
             bg-grey-800 bg-opacity-20
             border-b-2 border-l-2 border-blue-400
         ">
@@ -52,7 +52,10 @@ export const ProjectCard = ({
                         </p>
                     ) : null}
                 </div>
-                <div className="flex gap-4">
+                <div className="
+                    flex flex-col gap-4 flex-wrap
+                    sm:flex-row
+                ">
                     <p className="text-grey-300">Tecnologias:</p>
                     <ul className="flex gap-2 text-grey-300">
                         {techList?.map((tech: string) => (

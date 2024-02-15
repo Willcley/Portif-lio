@@ -9,11 +9,19 @@ export const Footer = () => {
             bg-grey-900
         ">
             <div className="
-                flex justify-between items-center
+                flex flex-col justify-between items-center gap-4
+                sm:flex-row
                 w-full max-w-6xl
             ">
-                <div className="flex gap-2">
-                    <img className="max-w-12 rounded-full" src="./imgs/willcley.jpg" />
+                <div className="
+                    flex flex-col items-center gap-2
+                    text-center
+                    sm:flex-row sm:text-start
+                ">
+                    <img className="
+                        max-w-16 max-h-16 rounded-full
+                        sm:max-w-12 sm:max-h-12
+                    " src="./imgs/willcley.jpg" />
                     <div>
                         <h3 className="text-blue-400">
                             Obrigado!
