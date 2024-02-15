@@ -15,15 +15,6 @@ export const Projects = () => {
             ">
                 <div className="flex flex-col gap-2">
                     <h2 className="text-xl font-bold">Meus projetos:</h2>
-                    <p className="text-sm text-grey-300">
-                        {"Projetos criados em "}
-                        <Link className="
-                            no-undeline text-blue-400
-                            hover:underline
-                        " target="_blank" href="https://kenzie.com.br/">
-                            Kenzie Academy Brasil
-                        </Link>
-                    </p>
                 </div>
                 <ul className="
                     grid grid-cols-2 gap-x-16 gap-y-12
@@ -32,6 +23,7 @@ export const Projects = () => {
                         img="./imgs/projects/burguerKenzie.png"
                         isNew={false}
                         title="Burguer Kenzie"
+                        kenzie={true}
                         techList={[
                             "React.js",
                             "Sass",
@@ -47,12 +39,13 @@ export const Projects = () => {
                         img="./imgs/projects/controlFinance.png"
                         isNew={false}
                         title="Control Finance"
+                        kenzie={true}
                         techList={[
                             "Html",
                             "Css",
                             "Javascript",
                         ]}
-                        description="Projeto feito para praticar o uso de métodos e código limpo. Nele aprendi alguns assuntos mais teóricos e de organização, como sobre: clareza no código, template literals, métodos, spread operator, arrow function, let/const e desestruturação de arrays e objetos."
+                        description="Projeto feito para praticar o uso de métodos e código limpo, em que aprendi alguns assuntos mais teóricos e de organização. Ele simula um site que calcula transações bancárias."
                         linkGithub=""
                         publicGithub={false}
                         linkApplication="https://kenzie-academy-brasil-developers.github.io/control-finance_willcley/"
@@ -62,30 +55,32 @@ export const Projects = () => {
                         img="./imgs/projects/openMusic.png"
                         isNew={false}
                         title="Open Music"
+                        kenzie={true}
                         techList={[
                             "Html",
                             "Css",
                             "Javascript",
                         ]}
-                        description="Nesse projeto, desenvolvi melhor meu conhecimento sobre filtragem de itens. Tive um pouco de dificuldade para usar duas filtragens diferentes no mesmo conteúdo, mas consegui compreender. E também pratiquei um pouco mais estilizações, como a alternância para o modo escuro e a barra de seleção de preço."
+                        description="Projeto que simula um site pra comprar musicas. Em que desenvolvi melhor meu conhecimento sobre filtragem de itens e estilizações."
                         linkGithub=""
                         publicGithub={false}
                         linkApplication="https://kenzie-academy-brasil-developers.github.io/open-music-base_willcley/"
                         online={true}
                     />
                     <ProjectCard
-                        img="./imgs/projects/openMusic.png"
+                        img="./imgs/projects/calculadora.png"
                         isNew={false}
-                        title="Open Music"
+                        title="Calculadora"
+                        kenzie={false}
                         techList={[
                             "Html",
                             "Css",
                             "Javascript",
                         ]}
-                        description="Nesse projeto, desenvolvi melhor meu conhecimento sobre filtragem de itens. Tive um pouco de dificuldade para usar duas filtragens diferentes no mesmo conteúdo, mas consegui compreender. E também pratiquei um pouco mais estilizações, como a alternância para o modo escuro e a barra de seleção de preço."
-                        linkGithub=""
-                        publicGithub={false}
-                        linkApplication="https://kenzie-academy-brasil-developers.github.io/open-music-base_willcley/"
+                        description="Projeto de uma calculadora onde estava começando a aprender sobre programação. Desenvolvi ele com a intenção de praticar mais minha lógica e aprender a usar lógica com estilização."
+                        linkGithub="https://github.com/Willcley/calculadora"
+                        publicGithub={true}
+                        linkApplication="https://willcley.github.io/calculadora/"
                         online={true}
                     />
                 </ul>

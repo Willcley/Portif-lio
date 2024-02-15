@@ -21,8 +21,8 @@ export const Contact = () => {
                         </span>
                         {" juntos"}
                     </h2>
-                    <p className="text-lg">
-                        Alguma descrição geral sobre os meios de contato
+                    <p className="text-lg text-grey-200">
+                        Entre em contato comigo, caso tenha interesse em me contratar para desenvolver-mos um projeto juntos.
                     </p>
                 </div>
                 <ul className="flex flex-col gap-6">

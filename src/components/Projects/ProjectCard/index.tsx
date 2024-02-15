@@ -6,6 +6,7 @@ export const ProjectCard = ({
     img,
     isNew,
     title,
+    kenzie,
     techList,
     description,
     linkGithub,
@@ -28,15 +29,28 @@ export const ProjectCard = ({
                 ">
                     <img className="h-full rounded-lg" src={img} />
                 </div>
-                <div className="flex items-center gap-4">
-                    <h3 className="text-2xl font-bold">{title}</h3>
-                    <span className="
-                        bg-blue-800 px-4 py-0.5
-                        rounded
-                        text-sm font-bold
-                    " hidden={!isNew}>
-                        New
-                    </span>
+                <div>
+                    <div className="flex items-center gap-4">
+                        <h3 className="text-2xl font-bold">{title}</h3>
+                        <span className="
+                            bg-blue-800 px-4 py-0.5
+                            rounded
+                            text-sm font-bold
+                        " hidden={!isNew}>
+                            New
+                        </span>
+                    </div>
+                    {kenzie ? (
+                        <p className="text-sm text-grey-300">
+                            {"Projeto criado em "}
+                            <Link className="
+                                no-undeline text-blue-400
+                                hover:underline
+                            " target="_blank" href="https://kenzie.com.br/">
+                                Kenzie Academy Brasil
+                            </Link>
+                        </p>
+                    ) : null}
                 </div>
                 <div className="flex gap-4">
                     <p className="text-grey-300">Tecnologias:</p>
@@ -60,7 +74,7 @@ export const ProjectCard = ({
                     <li className="flex items-center gap-2">
                         <FaGithub size={20} />
                         <Link className="hover:underline" target="_blank" href={linkGithub}>
-                            Github Code
+                            Código no Github
                         </Link>
                     </li>
                 ) : null}

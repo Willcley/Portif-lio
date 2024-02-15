@@ -4,6 +4,6 @@
 
 @layer components {
   .body {
-    @apply bg-gradient-to-b from-blue-900 from-10% to-grey-900 to-80% text-grey-100;
+    @apply bg-grey-850 text-grey-100;
   };
 };
