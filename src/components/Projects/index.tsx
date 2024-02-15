@@ -17,7 +17,7 @@ export const Projects = () => {
                     <h2 className="text-xl font-bold">Meus projetos:</h2>
                 </div>
                 <ul className="
-                    grid grid-cols-2 gap-x-16 gap-y-12
+                    flex justify-around gap-x-16 gap-y-12 flex-wrap
                 ">
                     <ProjectCard
                         img="./imgs/projects/burguerKenzie.png"

@@ -47,7 +47,9 @@ export const About = () => {
                         </div>
                     </div>
                     <div className="
-                        flex gap-2
+                        flex flex-col gap-2
+                        text-center
+                        sm:flex-row
                     ">
                         <Link className="
                             px-4 py-2

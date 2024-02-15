@@ -10,7 +10,8 @@ export const Contact = () => {
             min-w-full p-8
         ">
             <div className="
-                grid grid-cols-2 gap-4
+                grid grid-cols-1 gap-4
+                sm:grid-cols-2
                 w-full max-w-6xl
             ">
                 <div className="flex flex-col gap-4 py-8">
