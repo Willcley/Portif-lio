@@ -8,18 +8,13 @@ export const ProjectList = ({ projectList }: any) => {
     const [ cardNumber, setCardNumber ] = useState(0);
 
     useEffect(() => {
-        const firstRadio = document.getElementById("radio0");
-        if (firstRadio) {
-            firstRadio.checked = true;
-        };
-    }, []);
-
-    useEffect(() => {
-        const scrollProjects = document.getElementById("scrollProjects");
-        scrollProjects?.scroll({
-            left: (cardNumber) * 600, 
-            behavior: "smooth",
-        });
+        setTimeout(() => {
+            const scrollProjects = document.getElementById("scrollProjects");
+            scrollProjects?.scroll({
+                left: (cardNumber) * 600, 
+                behavior: "smooth",
+            });
+        }, 400);
         
         const checkRadio = document.getElementById(`radio${cardNumber}`);
         if (checkRadio) {
@@ -47,6 +42,7 @@ export const ProjectList = ({ projectList }: any) => {
                     (project: TProject, i: number) => (
                         <ProjectCard
                             key={i}
+                            cardNumber={cardNumber}
                             id={i}
                             img={project.img}
                             isNew={project.isNew}
@@ -54,7 +50,7 @@ export const ProjectList = ({ projectList }: any) => {
                             kenzie={project.kenzie}
                             techList={project.techList}
                             description={project.description}
-
+                            finishedAt={project.finishedAt}
                             linkGithub={project.linkGithub}
                             publicGithub={project.publicGithub}
                             linkApplication={project.linkAppliaction}
@@ -79,6 +75,8 @@ export const ProjectList = ({ projectList }: any) => {
                     onClick={() => {
                         if (cardNumber > 0) {
                             setCardNumber(cardNumber - 1);
+                        } else {
+                            setCardNumber((projectList.length - 1));
                         };
                     }}
                 >
@@ -93,10 +91,7 @@ export const ProjectList = ({ projectList }: any) => {
                                 name="radio"
                                 hidden={true}
                                 className="peer"
-                                onClick={() => {
-                                    setCardNumber(i)
-                                    console.log(cardNumber)
-                                }}
+                                onClick={() => setCardNumber(i)}
                             />
                             <label
                                 htmlFor={`radio${i}`}
@@ -124,6 +119,8 @@ export const ProjectList = ({ projectList }: any) => {
                     onClick={() => {
                         if (cardNumber < (projectList.length - 1)) {
                             setCardNumber(cardNumber + 1);
+                        } else {
+                            setCardNumber(0);
                         };
                     }}
                 >
