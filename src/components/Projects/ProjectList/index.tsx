@@ -6,6 +6,7 @@ import { TProject } from "@/interfaces/projects.interfaces";
 
 export const ProjectList = ({ projectList }: any) => {
     const [ cardNumber, setCardNumber ] = useState(0);
+    const [ seeMore, setSeeMore ] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
@@ -14,7 +15,7 @@ export const ProjectList = ({ projectList }: any) => {
                 left: (cardNumber) * 600, 
                 behavior: "smooth",
             });
-        }, 400);
+        }, seeMore ? 400 : 0);
         
         const checkRadio = document.getElementById(`radio${cardNumber}`);
         if (checkRadio) {
@@ -43,11 +44,15 @@ export const ProjectList = ({ projectList }: any) => {
                         <ProjectCard
                             key={i}
                             cardNumber={cardNumber}
+                            setCardNumber={setCardNumber}
+                            setSeeMore={setSeeMore}
                             id={i}
                             img={project.img}
                             isNew={project.isNew}
                             title={project.title}
+                            type={project.type}
                             kenzie={project.kenzie}
+                            framework={project.framework}
                             techList={project.techList}
                             description={project.description}
                             finishedAt={project.finishedAt}

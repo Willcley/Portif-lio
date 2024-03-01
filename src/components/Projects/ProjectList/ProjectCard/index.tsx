@@ -5,11 +5,15 @@ import { FaGithub, FaShare } from "react-icons/fa";
 
 export const ProjectCard = ({
     cardNumber,
+    setCardNumber,
+    setSeeMore,
     id,
     img,
     isNew,
     title,
+    type,
     kenzie,
+    framework,
     techList,
     description,
     finishedAt,
@@ -23,28 +27,50 @@ export const ProjectCard = ({
     const [ opacityInfo, setOpacityInfo ] = useState(false);
 
     useEffect(() => {
-        if (cardNumber === id) {
-            setTimeout(() => setMoreInfo(true), 1000);
-            setTimeout(() => setContentInfo(true), 1200);
-            setTimeout(() => setOpacityInfo(true), 1300);
-        } else if (moreInfo) {
+        if (cardNumber !== id) {
+            setSeeMore(false);
             setMoreInfo(false);
             setContentInfo(false);
             setOpacityInfo(false);
         };
     }, [cardNumber]);
 
+    const MoreInfo = () => {
+        if (cardNumber === id) {
+            if (moreInfo) {
+                setSeeMore(false);
+                setMoreInfo(false);
+                setContentInfo(false);
+                setOpacityInfo(false);
+            } else {
+                setSeeMore(true);
+                setMoreInfo(true);
+                setTimeout(() => setContentInfo(true), 100);
+                setTimeout(() => setOpacityInfo(true), 200);
+            };
+        };
+    };
+
     return (
-        <li id={id} className={`
-            flex justify-center
-            px-24
-            snap-center
-        `}>
+        <li
+            id={id}
+            className={`
+                ${cardNumber !== id ? "cursor-pointer" : null}
+                flex justify-center
+                px-24
+                snap-center
+            `}
+            onClick={() => {
+                if (cardNumber !== id) {
+                    setCardNumber(id);
+                }
+            }}
+        >
             <div className={`
                 flex flex-col
                 min-w-[400px] max-w-[400px]
                 rounded-tl-lg rounded-bl-lg
-                ${cardNumber !== id ? (
+                ${!moreInfo ? (
                     "rounded-tr-lg rounded-br-lg"
                 ) : null}
                 bg-grey-800 bg-opacity-20
@@ -82,7 +108,7 @@ export const ProjectCard = ({
                 </div>
                 <div className="
                     flex flex-col justify-between gap-4 p-4
-                    h-full
+                    min-h-[240px] h-full
                 ">
                     <div className="flex flex-col gap-4">
                         <div>
@@ -109,6 +135,36 @@ export const ProjectCard = ({
                             ) : null}
                         </div>
                     </div>
+                    <div className="
+                        flex justify-between items-center
+                    ">
+                        <p className="
+                            flex items-center gap-2
+                        ">
+                            {framework ? (
+                                <>
+                                    Framework:
+                                    <span className="
+                                        bg-blue-900 text-grey-200
+                                        rounded-md px-2 py-0.5
+                                    ">
+                                        {framework}
+                                    </span>
+                                </>
+                            ) : "Sem Framework"}
+                        </p>
+                        <button
+                            className="
+                                px-4 py-1
+                                rounded
+                                bg-grey-300 bg-opacity-20
+                                hover:bg-opacity-40
+                            "
+                            onClick={MoreInfo}
+                        >
+                            {moreInfo ? "Ler Menos" : "Ler Mais"}
+                        </button>
+                    </div>
                     <ul className="flex gap-4">
                         {publicGithub ? (
                             <li className="flex items-center gap-2">
@@ -122,7 +178,7 @@ export const ProjectCard = ({
                             <li className="flex items-center gap-2">
                                 <FaShare size={20} />
                                 <Link className="hover:underline" target="_blank" href={linkApplication}>
-                                    Aplicação
+                                    {type === "back-end" ? "Documentação" : "Aplicação"}
                                 </Link>
                             </li>
                         ) : null}
@@ -140,16 +196,26 @@ export const ProjectCard = ({
                 backdrop-blur-sm
                 border-b-2 border-grey-100 border-opacity-40
             `}>
-                <p className={`
+                <div className={`
                     ${!contentInfo ? "hidden" : null}
                     ${opacityInfo ? "opacity-100" : "opacity-0"}
-                    flex justify-center items-center text-center
-                    duration-200
-                    h-full
-                    text-grey-200
-                    `}>
-                    {description}
-                </p>
+                    flex flex-col items-center text-center gap-8
+                `}>
+                    <span className="
+                        px-4 py-1
+                        rounded-md
+                        bg-blue-900 bg-opacity-40
+                    ">
+                        {type}
+                    </span>
+                    <p className={`
+                        duration-200
+                        h-full
+                        text-grey-200
+                        `}>
+                        {description}
+                    </p>
+                </div>
                 <div className={`
                     ${!contentInfo ? "hidden" : null}
                     ${opacityInfo ? "opacity-100" : "opacity-0"}
@@ -160,7 +226,7 @@ export const ProjectCard = ({
                         w-full
                         border border-grey-300 border-opacity-40"
                     />
-                    <h4 className="text-grey-100">Tecnologias:</h4>
+                    <h4 className="mb-4 text-grey-100">Tecnologias:</h4>
                     <ul className="
                         duration-200
                         flex justify-center gap-2 flex-wrap
