@@ -14,7 +14,7 @@ export const Projects = () => {
                 w-full max-w-6xl
             ">
                 <div className="flex flex-col gap-2">
-                    <h2 className="text-xl font-bold">Meus projetos:</h2>
+                    <h2 className="text-xl font-bold">Alguns projetos meus:</h2>
                 </div>
             </div>
             <ProjectList projectList={kenzieProjectList} />

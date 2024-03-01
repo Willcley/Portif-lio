@@ -197,9 +197,11 @@ export const ProjectCard = ({
                 border-b-2 border-grey-100 border-opacity-40
             `}>
                 <div className={`
+                    relative
                     ${!contentInfo ? "hidden" : null}
                     ${opacityInfo ? "opacity-100" : "opacity-0"}
                     flex flex-col items-center text-center gap-8
+                    h-full max-h-full
                 `}>
                     <span className="
                         px-4 py-1
@@ -210,10 +212,16 @@ export const ProjectCard = ({
                     </span>
                     <p className={`
                         duration-200
-                        h-full
+                        text-justify
+                        p-8 h-full
                         text-grey-200
-                        `}>
+                    `}>
                         {description}
+                    </p>
+                    <p className="
+                        absolute bottom-0 right-0
+                    ">
+                        {finishedAt}
                     </p>
                 </div>
                 <div className={`
