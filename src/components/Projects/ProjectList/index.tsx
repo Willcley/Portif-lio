@@ -18,11 +18,6 @@ export const ProjectList = ({ projectList }: any) => {
                 behavior: "smooth",
             });
         }, seeMore ? 400 : 0);
-        
-        const checkRadio = document.getElementById(`radio${cardNumber}`);
-        if (checkRadio) {
-            checkRadio.checked = true;
-        };
     }, [cardNumber]);
 
     useEffect(() => {
@@ -108,6 +103,7 @@ export const ProjectList = ({ projectList }: any) => {
                                     name="radio"
                                     hidden={true}
                                     className="peer"
+                                    checked={cardNumber === i ? true : false}
                                     onClick={() => setCardNumber(i)}
                                 />
                                 <label
