@@ -45,8 +45,8 @@ export const ProjectCard = ({
             } else {
                 setSeeMore(true);
                 setMoreInfo(true);
-                setTimeout(() => setContentInfo(true), 100);
-                setTimeout(() => setOpacityInfo(true), 200);
+                setTimeout(() => setContentInfo(true), 200);
+                setTimeout(() => setOpacityInfo(true), 300);
             };
         };
     };
@@ -200,6 +200,7 @@ export const ProjectCard = ({
                     relative
                     ${!contentInfo ? "hidden" : null}
                     ${opacityInfo ? "opacity-100" : "opacity-0"}
+                    duration-200
                     flex flex-col items-center text-center gap-8
                     h-full max-h-full
                 `}>
@@ -211,7 +212,6 @@ export const ProjectCard = ({
                         {type}
                     </span>
                     <p className={`
-                        duration-200
                         text-justify
                         p-8 h-full
                         text-grey-200
@@ -227,7 +227,7 @@ export const ProjectCard = ({
                 <div className={`
                     ${!contentInfo ? "hidden" : null}
                     ${opacityInfo ? "opacity-100" : "opacity-0"}
-                    duration-200
+                    duration-300
                     flex flex-col items-center gap-4
                 `}>
                     <hr className="
@@ -236,7 +236,6 @@ export const ProjectCard = ({
                     />
                     <h4 className="mb-4 text-grey-100">Tecnologias:</h4>
                     <ul className="
-                        duration-200
                         flex justify-center gap-2 flex-wrap
                         text-grey-300
                     ">
