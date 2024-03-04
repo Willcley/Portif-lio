@@ -7,7 +7,7 @@ import { TProject } from "@/interfaces/projects.interfaces";
 export const ProjectList = ({ projectList }: any) => {
     const [ cardNumber, setCardNumber ] = useState(0);
     const [ seeMore, setSeeMore ] = useState(false);
-    const [ cardSpacig, setCardSpacing ] = useState(234);
+    const [ cardSpacig, setCardSpacing ] = useState(398);
 
     const scrollProjects = useRef<null | HTMLUListElement>(null);
     const projectCard0 = scrollProjects.current?.querySelector("#projectCard0");
