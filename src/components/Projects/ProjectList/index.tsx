@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { TProject } from "@/interfaces/projects.interfaces";
 
@@ -8,13 +8,14 @@ export const ProjectList = ({ projectList }: any) => {
     const [ cardNumber, setCardNumber ] = useState(0);
     const [ seeMore, setSeeMore ] = useState(false);
     const [ cardSpacig, setCardSpacing ] = useState(234);
-    const projectCard0 = document.getElementById("projectCard0");
+
+    const scrollProjects = useRef<null | HTMLUListElement>(null);
+    const projectCard0 = scrollProjects.current?.querySelector("#projectCard0");
 
     useEffect(() => {
         setTimeout(() => {
-            const scrollProjects = document.getElementById("scrollProjects");
-            scrollProjects?.scroll({
-                left: (cardNumber) * (192 + cardSpacig), 
+            scrollProjects.current?.scroll({
+                left: cardNumber * (192 + cardSpacig), 
                 behavior: "smooth",
             });
         }, seeMore ? 400 : 0);
@@ -30,16 +31,19 @@ export const ProjectList = ({ projectList }: any) => {
             flex flex-col items-center
             w-full
         ">
-            <ul id="scrollProjects" className={`
-                relative
-                duration-300
-                flex gap-48
-                px-[40%]
-                w-screen
-                overflow-x-hidden
-                snap-x snap-mandatory
-                list-none
-            `}>
+            <ul
+                ref={scrollProjects}
+                className={`
+                    relative
+                    duration-300
+                    flex gap-48
+                    px-[40%]
+                    w-screen
+                    overflow-x-hidden
+                    snap-x snap-mandatory
+                    list-none
+                `
+            }>
                 {projectList.length > 0 ? projectList.map(
                     (project: TProject, i: number) => (
                         <ProjectCard
