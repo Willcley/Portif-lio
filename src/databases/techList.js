@@ -9,23 +9,20 @@ import {
 import { IoLogoCss3 } from "react-icons/io";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import {
+    SiAxios,
     SiZod,
     SiExpress,
     SiDjango,
     SiPostgresql,
     SiReacthookform,
 } from "react-icons/si";
+import { PiBracketsCurly } from "react-icons/pi";
 
 export const techList = [
     {
         icon: <FaReact size={40} />,
         title: "React",
         link: "https://react.dev",
-    },
-    {
-        icon: <SiReacthookform size={40} />,
-        title: "React Hook Form",
-        link: "https://react-hook-form.com",
     },
     {
         icon: <FaHtml5 size={40} />,
@@ -53,6 +50,11 @@ export const techList = [
         link: "https://www.typescriptlang.org",
     },
     {
+        icon: <SiAxios size={40} />,
+        title: "Axios",
+        link: "https://axios-http.com/ptbr/docs/intro",
+    },
+    {
         icon: <SiZod size={40} />,
         title: "Zod",
         link: "https://zod.dev",
@@ -71,6 +73,11 @@ export const techList = [
         icon: <SiExpress size={40} />,
         title: "Express",
         link: "https://expressjs.com/pt-br/",
+    },
+    {
+        icon: <PiBracketsCurly size={40} />,
+        title: "TypeORM",
+        link: "https://typeorm.io",
     },
     {
         icon: <FaPython size={40} />,

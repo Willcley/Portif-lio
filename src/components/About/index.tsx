@@ -65,6 +65,7 @@ export const About = () => {
                             bg-blue-400 text-blue-900
                             font-bold
                             rounded-lg
+                            transition-[4s]
                             hover:bg-grey-100 hover:text-grey-900
                         " target="_blank" href="https://docs.google.com/document/d/1TfzS-0yjA_1KyV32L8kGzLTRGvn2It1cAjYIn_O0Yxw/edit">
                             Currículo
@@ -74,6 +75,7 @@ export const About = () => {
                             bg-blue-400 text-blue-900
                             font-bold
                             rounded-lg
+                            transition-[4s]
                             hover:bg-grey-900 hover:text-white
                         " target="_blank" href="https://github.com/Willcley">
                             GitHub
@@ -83,6 +85,7 @@ export const About = () => {
                             bg-blue-400 text-blue-900
                             font-bold
                             rounded-lg
+                            transition-[4s]
                             hover:bg-blue-500 hover:text-white
                         " target="_blank" href="https://www.linkedin.com/in/willcley/">
                             LinkedIn
