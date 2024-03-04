@@ -66,7 +66,7 @@ export const ProjectCard = ({
         >
             <div id={`projectCard${id}`} className={`
                 flex flex-col
-                sm:min-w-[400px] max-w-[400px]
+                min-w-[280px] max-w-[400px] sm:min-w-[400px]
                 rounded-tl-lg rounded-bl-lg
                 rounded-tr-lg rounded-br-lg
                 ${!moreInfo ? (
