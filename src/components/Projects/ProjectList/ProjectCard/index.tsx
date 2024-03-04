@@ -52,12 +52,10 @@ export const ProjectCard = ({
     };
 
     return (
-        <li
-            id={id}
+        <li id={`project${id}`}
             className={`
                 ${cardNumber !== id ? "cursor-pointer" : null}
                 flex justify-center
-                px-24
                 snap-center
             `}
             onClick={() => {
@@ -66,13 +64,14 @@ export const ProjectCard = ({
                 }
             }}
         >
-            <div className={`
+            <div id={`projectCard${id}`} className={`
                 flex flex-col
-                min-w-[400px] max-w-[400px]
+                sm:min-w-[400px] max-w-[400px]
                 rounded-tl-lg rounded-bl-lg
+                rounded-tr-lg rounded-br-lg
                 ${!moreInfo ? (
-                    "rounded-tr-lg rounded-br-lg"
-                ) : null}
+                    "lg:rounded-tr-lg lg:rounded-br-lg"
+                ) : "lg:rounded-tr-none lg:rounded-br-none"}
                 bg-grey-800 bg-opacity-20
                 border-b-2 border-b-blue-800
                 border-l-2 border-l-blue-400
@@ -85,15 +84,15 @@ export const ProjectCard = ({
                     {img ? (
                         <img className={`
                             object-cover
-                            rounded-tl-lg
-                            ${!moreInfo ? "rounded-tr-lg" : null}
+                            rounded-tl-lg rounded-tr-lg
+                            ${!moreInfo ? "lg:rounded-tr-lg" : "lg:rounded-tr-none"}
                         `} src={`./imgs/projects/${img}`} />
                     ) : (
                         <div className={`
                             flex items-center
                             w-full h-48
-                            rounded-tl-lg
-                            ${!moreInfo ? "rounded-tr-lg" : null}
+                            rounded-tl-lg rounded-tr-lg
+                            ${!moreInfo ? "lg:rounded-tr-lg" : "lg:rounded-tr-none"}
                             bg-grey-800
                         `}>
                             <p className={`
@@ -155,6 +154,7 @@ export const ProjectCard = ({
                         </p>
                         <button
                             className="
+                                hidden lg:block
                                 px-4 py-1
                                 rounded
                                 bg-grey-300 bg-opacity-20
@@ -186,8 +186,9 @@ export const ProjectCard = ({
                 </div>
             </div>
             <div className={`
+                hidden lg:flex
                 relative
-                flex flex-col justify-between
+                flex-col justify-between
                 duration-200 ease-linear
                 ${moreInfo ? "p-4" : "p-0"}
                 ${moreInfo ? "w-[600px]" : "w-0"}

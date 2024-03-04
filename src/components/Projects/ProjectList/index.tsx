@@ -7,12 +7,14 @@ import { TProject } from "@/interfaces/projects.interfaces";
 export const ProjectList = ({ projectList }: any) => {
     const [ cardNumber, setCardNumber ] = useState(0);
     const [ seeMore, setSeeMore ] = useState(false);
+    const [ cardSpacig, setCardSpacing ] = useState(234);
+    const projectCard0 = document.getElementById("projectCard0");
 
     useEffect(() => {
         setTimeout(() => {
             const scrollProjects = document.getElementById("scrollProjects");
             scrollProjects?.scroll({
-                left: (cardNumber) * 600, 
+                left: (cardNumber) * (192 + cardSpacig), 
                 behavior: "smooth",
             });
         }, seeMore ? 400 : 0);
@@ -23,6 +25,10 @@ export const ProjectList = ({ projectList }: any) => {
         };
     }, [cardNumber]);
 
+    useEffect(() => {
+        setCardSpacing(projectCard0?.clientWidth || 234);
+    }, [projectCard0?.clientWidth]);
+
     return (
         <div className="
             relative
@@ -32,7 +38,7 @@ export const ProjectList = ({ projectList }: any) => {
             <ul id="scrollProjects" className={`
                 relative
                 duration-300
-                flex
+                flex gap-48
                 px-[40%]
                 w-screen
                 overflow-x-hidden
@@ -64,11 +70,11 @@ export const ProjectList = ({ projectList }: any) => {
                     )
                 ) : <p>Lista vazia...</p>}
             </ul>
-            <ul className="
-                z-10
+            <div className="
+                relative
                 flex justify-center items-center
-                p-0 m-0 mt-4
-                min-w-full h-12
+                p-0 m-0 mt-4 mb-12 sm:mb-0
+                w-full max-w-6xl h-12
             ">
                 <button
                     className="
@@ -87,33 +93,40 @@ export const ProjectList = ({ projectList }: any) => {
                 >
                     {`<`}
                 </button>
-                {projectList.length > 0 ? projectList.map(
-                    (project: TProject, i: number) => (
-                        <li key={`radio${i}`} className="flex">
-                            <input
-                                id={`radio${i}`}
-                                type="radio"
-                                name="radio"
-                                hidden={true}
-                                className="peer"
-                                onClick={() => setCardNumber(i)}
-                            />
-                            <label
-                                htmlFor={`radio${i}`}
-                                className="
-                                    cursor-pointer
-                                    duration-200
-                                    p-2 mx-2 peer-checked:mx-1
-                                    rounded-full
-                                    border-2 border-grey-900
-                                    ring-2 ring-blue-400
-                                    hover:bg-blue-400
-                                    peer-checked:bg-blue-400 peer-checked:p-3
-                                "
-                            ></label>
-                        </li>
-                    )
-                ) : null}
+                <ul className="
+                    absolute sm:relative
+                    top-12 sm:top-0
+                    flex justify-center items-center flex-wrap
+                    w-full h-full
+                ">
+                    {projectList.length > 0 ? projectList.map(
+                        (project: TProject, i: number) => (
+                            <li key={`radio${i}`} className="flex">
+                                <input
+                                    id={`radio${i}`}
+                                    type="radio"
+                                    name="radio"
+                                    hidden={true}
+                                    className="peer"
+                                    onClick={() => setCardNumber(i)}
+                                />
+                                <label
+                                    htmlFor={`radio${i}`}
+                                    className="
+                                        cursor-pointer
+                                        duration-200
+                                        p-2 m-2 peer-checked:m-1
+                                        rounded-full
+                                        border-2 border-grey-900
+                                        ring-2 ring-blue-400
+                                        hover:bg-blue-400
+                                        peer-checked:bg-blue-400 peer-checked:p-3
+                                    "
+                                ></label>
+                            </li>
+                        )
+                    ) : null}
+                </ul>
                 <button
                     className="
                         w-full h-full
@@ -131,7 +144,7 @@ export const ProjectList = ({ projectList }: any) => {
                 >
                     {`>`}
                 </button>
-            </ul>
+            </div>
         </div>
     );
 };
