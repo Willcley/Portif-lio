@@ -8,7 +8,6 @@ export const ProjectList = ({ projectList }: any) => {
     const [ cardNumber, setCardNumber ] = useState(0);
     const [ seeMore, setSeeMore ] = useState(false);
     const [ cardSpacig, setCardSpacing ] = useState(234);
-    const projectCard0 = document.getElementById("projectCard0");
 
     useEffect(() => {
         setTimeout(() => {
@@ -21,8 +20,11 @@ export const ProjectList = ({ projectList }: any) => {
     }, [cardNumber]);
 
     useEffect(() => {
-        setCardSpacing(projectCard0?.clientWidth || 234);
-    }, [projectCard0?.clientWidth]);
+        setCardSpacing(
+            document.getElementById("projectCard0")?.clientWidth
+            || 234
+        );
+    }, [document.getElementById("projectCard0")?.clientWidth]);
 
     return (
         <div className="
