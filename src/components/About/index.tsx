@@ -12,7 +12,7 @@ export const About = () => {
             min-w-full p-8
         ">
             <div className="
-                z-50
+                z-10
                 flex flex-col justify-between items-start gap-4
                 w-full max-w-6xl
             ">
@@ -113,24 +113,27 @@ export const About = () => {
             </div>
             <div className="
                 absolute top-0 right-0
-                z-10
-                w-2/5 min-h-full
+                z-0
+                w-2/5 h-full
             ">
                 <div className="
-                    z-0
+                    relative
+                    duration-200
+                    w-full h-full
                 ">
                     <Image
                         src="/imgs/codeWallpaper.jpg"
                         alt="code"
                         layout="fill"
                         objectFit="cover"
+                        sizes="full"
                     />
+                    <div className="
+                        absolute top-0 right-0
+                        min-w-full min-h-full z-10
+                        bg-gradient-to-r from-grey-850 to-transparent
+                    "></div>
                 </div>
-                <div className="
-                    absolute top-0 right-0
-                    min-w-full min-h-full z-10
-                    bg-gradient-to-r from-grey-850 to-transparent
-                "></div>
             </div>
         </section>
     );
