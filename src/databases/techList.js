@@ -14,7 +14,7 @@ import {
     SiExpress,
     SiDjango,
     SiPostgresql,
-    SiReacthookform,
+    SiTailwindcss,
 } from "react-icons/si";
 import { PiBracketsCurly } from "react-icons/pi";
 
@@ -38,6 +38,11 @@ export const techList = [
         icon: <FaSass size={40} />,
         title: "Sass",
         link: "https://sass-lang.com",
+    },
+    {
+        icon: <SiTailwindcss size={40} />,
+        title: "Tailwindcss",
+        link: "https://tailwindcss.com",
     },
     {
         icon: <BiLogoJavascript size={40} />,
