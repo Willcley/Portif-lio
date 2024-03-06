@@ -14,7 +14,7 @@ const Home = () => {
       left: 0,
       behavior: "smooth",
     });
-  });
+  }, []);
 
   return (
     <section className="body min-h-screen">
