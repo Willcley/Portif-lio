@@ -11,7 +11,7 @@ export const Header = () => {
             min-w-full w-full 
             bg-grey-900
             border-b-2 border-blue-400
-        " >
+        ">
             <div className="
                 flex justify-between items-center
                 w-full max-w-6xl

@@ -11,9 +11,11 @@ export const useOutclick = (callback) => {
     };
 
     window.addEventListener('mousedown', handleOutclick);
+    window.addEventListener('scroll', handleOutclick);
     
     return () => {
       window.removeEventListener('mousedown', handleOutclick);
+      window.removeEventListener('scroll', handleOutclick);
     };
   }, []);
 
