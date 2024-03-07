@@ -72,7 +72,7 @@ export const ProjectCard = ({
                 ${!moreInfo ? (
                     "lg:rounded-tr-lg lg:rounded-br-lg"
                 ) : "lg:rounded-tr-none lg:rounded-br-none"}
-                bg-grey-800 bg-opacity-20
+                bg-grey-850
                 border-b-2 border-b-blue-800
                 border-l-2 border-l-blue-400
             `}>
