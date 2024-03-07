@@ -23,7 +23,7 @@ export const Bunner = () => {
                             text-2xl font-bold
                             text-blue-300
                         ">
-                            Olá, seja bem-vindo!
+                            Seja bem-vindo!
                         </h3>
                     </div>
                     <h1 className="
