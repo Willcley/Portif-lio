@@ -12,7 +12,7 @@ export const Bunner = () => {
                 z-10
                 flex justify-between items-start gap-4
                 sm:items-center
-                py-12
+                py-16
                 w-full max-w-6xl h-full
             ">
                 <div className="
@@ -20,19 +20,12 @@ export const Bunner = () => {
                 ">
                     <div className="z-10">
                         <h3 className="
-                            text-2xl font-bold
+                            text-4xl font-bold
                             text-blue-300
                         ">
-                            Seja bem-vindo!
+                            Olá 👋, seja bem-vindo!
                         </h3>
                     </div>
-                    <h1 className="
-                        z-10
-                        text-4xl font-bold
-                    ">
-                        {"Desenvolvedor web "}
-                        <span className="text-orange-400">Full Stack</span>
-                    </h1>
                 </div>
             </div>
             <div className="
