@@ -32,7 +32,7 @@ export const Contact = () => {
                         iconStyle="bg-green-400"
                         title="Meu Celular"
                         description="Me envie uma mensagem pelo whatsapp, se deseja uma conversa mais casual"
-                        link="https://w.app/willcleymelo"
+                        link="https://api.whatsapp.com/send?phone=5521966461596"
                         linkText="Enviar Mensagem"
                     />
                     <ContactCard

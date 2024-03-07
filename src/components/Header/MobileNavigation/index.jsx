@@ -91,7 +91,7 @@ export const MobileNavigation = () => {
                             "
                             onClick={() => setOpenNav(false)}
                         >
-                            Contatos
+                            Contato
                         </Link>
                         {/* <Link
                             href=""
