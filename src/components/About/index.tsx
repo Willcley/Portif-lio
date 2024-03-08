@@ -66,7 +66,7 @@ export const About = () => {
                     />
                     <AboutNavButton
                         text="habilidades"
-                        value="hability"
+                        value="ability"
                         position={3}
                         scrollRef={aboutScroll}
                         screenAbout={screenAbout}

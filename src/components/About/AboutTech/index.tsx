@@ -6,7 +6,6 @@ export const AboutTech = () => {
         <li className="
             flex justify-center
             min-w-full
-            border-2 border-yellow-400
             snap-center
         ">
             <div className="
