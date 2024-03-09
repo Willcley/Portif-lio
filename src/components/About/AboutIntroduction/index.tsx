@@ -19,17 +19,20 @@ export const AboutIntroduction = () => {
                 ">
                     <div className="
                         flex items-center gap-2
-                        text-end
                     ">
                         <img
                             src="./imgs/willcley.jpg"
                             className="
                                 max-w-16
                                 rounded-full
-                                border-2 border-blue-400
+                                border-2 border-grey-850
+                                shadow-around-md-blue-400
                             "
                         />
-                        <h3 className="text-xl font-bold">
+                        <h3 className="
+                            text-md font-bold
+                            sm:text-xl
+                        ">
                             Olá, me chamo Willcley!
                         </h3>
                     </div>
@@ -38,10 +41,15 @@ export const AboutIntroduction = () => {
                     ">
                         <h1 className="
                             z-10
-                            text-4xl font-bold
+                            text-3xl font-bold
+                            sm:text-5xl
                         ">
                             {"Desenvolvedor web "}
-                            <span className="text-orange-400">Full Stack</span>
+                            <span className="
+                                text-orange-400
+                            ">
+                                Full Stack
+                            </span>
                         </h1>
                         <p className="text-grey-300">
                             desenhista | futuro desenvolvedor de jogos

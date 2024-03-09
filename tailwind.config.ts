@@ -24,6 +24,9 @@ const config: Config = {
           900: "#141414",
         },
       },
+      boxShadow: {
+        "around-md-blue-400": "0 0 12px #1ab4f0",
+      },
     },
   },
   plugins: [],

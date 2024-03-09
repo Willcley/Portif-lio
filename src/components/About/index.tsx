@@ -28,17 +28,18 @@ export const About = ({ about }: any) => {
             >
                 <AboutIntroduction />
                 <AboutTexts />
-                <AboutTech />
-                <AboutAbilities />
+                {/* <AboutTech /> */}
+                {/* <AboutAbilities /> */}
             </ul>
             <nav className="
                 z-10
                 absolute bottom-0
-                w-full
+                sm:w-full
             ">
                 <ul className="
                     flex flex-col items-start
                     sm:flex-row sm:justify-center sm:gap-4
+                    bg-gradient-to-tr from-grey-850
                 ">
                     <AboutNavButton
                         text="início"
@@ -56,22 +57,22 @@ export const About = ({ about }: any) => {
                         screenAbout={screenAbout}
                         setScreenAbout={setScreenAbout}
                     />
-                    <AboutNavButton
+                    {/* <AboutNavButton
                         text="tecnologias"
                         value="tech"
                         position={2}
                         scrollRef={aboutScroll}
                         screenAbout={screenAbout}
                         setScreenAbout={setScreenAbout}
-                    />
-                    <AboutNavButton
+                    /> */}
+                    {/* <AboutNavButton
                         text="habilidades"
                         value="ability"
                         position={3}
                         scrollRef={aboutScroll}
                         screenAbout={screenAbout}
                         setScreenAbout={setScreenAbout}
-                    />
+                    /> */}
                 </ul>
             </nav>
             <div className="
