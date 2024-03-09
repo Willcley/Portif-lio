@@ -14,28 +14,24 @@ export const AboutIntroduction = () => {
             ">
                 <div className="
                     flex flex-col gap-8
+                    pt-8
                     sm:max-w-[60%]
                 ">
                     <div className="
-                        flex flex-col justify-between gap-16
-                        max-w-xl
+                        flex items-center gap-2
+                        text-end
                     ">
-                        <div className="
-                            flex items-center gap-2
-                            text-end
-                        ">
-                            <img
-                                src="./imgs/willcley.jpg"
-                                className="
-                                    max-w-16
-                                    rounded-full
-                                    border-2 border-blue-400
-                                "
-                            />
-                            <h3 className="text-xl font-bold">
-                                Olá, me chamo Willcley
-                            </h3>
-                        </div>
+                        <img
+                            src="./imgs/willcley.jpg"
+                            className="
+                                max-w-16
+                                rounded-full
+                                border-2 border-blue-400
+                            "
+                        />
+                        <h3 className="text-xl font-bold">
+                            Olá, me chamo Willcley!
+                        </h3>
                     </div>
                     <div className="
                         flex flex-col
@@ -63,7 +59,7 @@ export const AboutIntroduction = () => {
                 </div>
                 <div className="
                     flex flex-col items-end gap-2
-                    lg:flex-row
+                    lg:flex-row lg:items-center
                     self-end
                 ">
                     <div className="
@@ -81,7 +77,7 @@ export const AboutIntroduction = () => {
                                 className="
                                     duration-200
                                     rounded-full
-                                    text-blue-400 hover:text-grey-100
+                                    text-blue-400 hover:text-opacity-60
                                 "
                             />
                         </Link>
@@ -97,7 +93,7 @@ export const AboutIntroduction = () => {
                                 className="
                                     duration-200
                                     rounded-md
-                                    text-blue-400 hover:text-blue-500
+                                    text-blue-400 hover:text-opacity-60
                                 "
                             />
                         </Link>
@@ -105,10 +101,11 @@ export const AboutIntroduction = () => {
                     <Link className="
                         duration-200
                         px-4 py-2
-                        bg-blue-400 text-blue-900
-                        hover:bg-orange-400 hover:text-orange-800
-                        font-bold
                         rounded-lg
+                        text-blue-400
+                        hover:bg-blue-800 hover:bg-opacity-20
+                        border-2 border-blue-400
+                        font-bold
                     " target="_blank" href="https://docs.google.com/document/d/1TfzS-0yjA_1KyV32L8kGzLTRGvn2It1cAjYIn_O0Yxw/edit">
                         Currículo
                     </Link>
