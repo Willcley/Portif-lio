@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export const Bunner = () => {
+export const Bunner = ({ bunner }: any) => {
     return (
-        <section className="
+        <section ref={bunner} className="
             relative
             flex justify-center items-center
             p-8 w-full

@@ -7,7 +7,6 @@
     @apply
       bg-grey-850
       text-grey-100
-      overflow-hidden
       scroll-smooth
     ;
   };

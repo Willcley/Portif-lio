@@ -1,7 +1,12 @@
 import { DesktopNavigation } from "./DesktopNavigation";
 import { MobileNavigation } from "./MobileNavigation";
 
-export const Header = () => {
+export const Header = ({
+    bunner,
+    about,
+    projects,
+    contact,
+}: any) => {
     return (
         <header className="
             sticky top-0
@@ -21,8 +26,18 @@ export const Header = () => {
                 ">
                     Willcley Melo
                 </h2>
-                <MobileNavigation />
-                <DesktopNavigation />
+                <MobileNavigation
+                    bunner={bunner}
+                    about={about}
+                    projects={projects}
+                    contact={contact}
+                />
+                <DesktopNavigation
+                    bunner={bunner}
+                    about={about}
+                    projects={projects}
+                    contact={contact}
+                />
             </div>
         </header>
     );

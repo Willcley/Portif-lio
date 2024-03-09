@@ -6,12 +6,12 @@ import { AboutAbilities } from "./AboutAbilities";
 import { useRef, useState } from "react";
 import { AboutNavButton } from "./AboutNavButton";
 
-export const About = () => {
+export const About = ({ about }: any) => {
     const [ screenAbout, setScreenAbout ] = useState("intro");
     const aboutScroll = useRef<null | HTMLUListElement>(null)
 
     return (
-        <section id="about" className="
+        <section ref={about} className="
             relative
             flex
             min-w-full min-h-[600px]
