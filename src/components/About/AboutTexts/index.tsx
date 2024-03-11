@@ -1,3 +1,12 @@
+import {
+    FaSteam,
+    FaSpotify,
+    FaYoutube,
+    FaFileWord,
+} from "react-icons/fa";
+import { SiGimp } from "react-icons/si";
+import { TbChefHat } from "react-icons/tb";
+
 export const AboutTexts = () => {
     return (
         <li className="
@@ -28,8 +37,8 @@ export const AboutTexts = () => {
                     </div>
                 </div>
                 <div className="
-                    flex flex-col justify-between gap-4
-                    sm:flex-row
+                    flex flex-col gap-4
+                    sm:justify-around
                     w-full h-full
                     pb-24
                     sm:pb-0
@@ -42,77 +51,85 @@ export const AboutTexts = () => {
                             text-xl text-orange-400
                         ">Interesses</h2>
                         <ul className="
-                            flex sm:flex-col gap-4
-                            md:flex-row
-                            w-full
+                            flex gap-4
+                            text-grey-200
                         ">
                             <li className="
-                                pl-4 w-full
+                                flex flex-col gap-1
+                                pl-4
                                 border-l-2 border-blue-500
                             ">
                                 <h3 className="text-blue-400">Principais:</h3>
-                                <p>🎮 jogos</p>
-                                <p>🎵 músicas</p>
-                                <p>🎨 desenhar</p>
+                                <p className="flex items-center gap-2">
+                                    <FaSteam
+                                        title="Steam"
+                                        size={20}
+                                        className="text-blue-800"
+                                    />
+                                    jogos
+                                </p>
+                                <p className="flex items-center gap-2">
+                                    <FaSpotify
+                                        title="Spotify"
+                                        size={20}
+                                        className="text-green-500"
+                                    />
+                                    músicas
+                                </p>
+                                <p className="flex items-center gap-2">
+                                    <SiGimp
+                                        title="Gimp"
+                                        size={20}
+                                        className="text-grey-100"
+                                    />
+                                    desenhar
+                                </p>
                             </li>
                             <li className="
-                                pl-4 w-full
+                            flex flex-col gap-1
+                                pl-4
                                 border-l-2 border-blue-500
                             ">
                                 <h3 className="text-blue-400">Secundários:</h3>
-                                <p>▶️ videos | animes</p>
-                                <p>📖 escrever | ler</p>
-                                <p>🍳 cozinhar</p>
+                                <p className="flex items-center gap-2">
+                                    <FaYoutube
+                                        title="YouTube"
+                                        size={20}
+                                        className="text-red-600"
+                                    />
+                                    youtube
+                                </p>
+                                <p className="flex items-center gap-2">
+                                    <FaFileWord
+                                        title="Word"
+                                        size={20}
+                                        className="text-blue-500"
+                                    />
+                                    escrever
+                                </p>
+                                <p>
+                                    🍳 cozinhar
+                                </p>
                             </li>
                         </ul>
                     </div>
                     <div className="
                         flex flex-col gap-2
-                        self-end text-end
+                        sm:text-end
                         w-full
                     ">
                         <h2 className="
-                            text-xl text-orange-400
+                            text-xl text-orange-600
                         ">Localização</h2>
-                        <ul className="
-                            flex flex-col items-end gap-2
-                            px-2
-                            border-r-2 border-blue-500
+                        <p className="
+                            flex gap-1
+                            sm:self-end
+                            text-grey-300
                         ">
-                            <li className="flex gap-2">
-                                <p className="text-blue-500">
-                                    {">"}
-                                </p>
-                                <p className="flex gap-2">
-                                    <span className="text-blue-400">
-                                        país:
-                                    </span>
-                                    Brasil
-                                </p>
-                            </li>
-                            <li className="flex gap-2">
-                                <p className="text-blue-500">
-                                    {">"}
-                                </p>
-                                <p className="flex gap-2">
-                                    <span className="text-blue-400">
-                                        estado:
-                                    </span>
-                                    Rio de Janeiro - RJ
-                                </p>
-                            </li>
-                            <li className="flex gap-2">
-                                <p className="text-blue-500">
-                                    {">"}
-                                </p>
-                                <p className="flex gap-2">
-                                    <span className="text-blue-400">
-                                        cidade:
-                                    </span>
-                                    Duque de Caxias
-                                </p>
-                            </li>
-                        </ul>
+                            <p>Brasil |</p>
+                            <p className="hidden sm:block">Rio de Janeiro -</p>
+                            <p>RJ | Duque de Caxias</p>
+                        </p>
                     </div>
                 </div>
             </div>

@@ -68,8 +68,8 @@ export const AboutIntroduction = () => {
                     </div>
                 </div>
                 <div className="
-                    flex flex-col-reverse justify-between gap-2
-                    sm:flex-col sm:items-end
+                    flex flex-col-reverse justify-between gap-16
+                    sm:flex-col sm:items-end sm:gap-2
                     lg:flex-row lg:justify-end lg:items-center
                     h-full sm:h-auto
                 ">
