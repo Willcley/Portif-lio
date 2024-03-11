@@ -66,7 +66,7 @@ export const ProjectCard = ({
         >
             <div id={`projectCard${id}`} className={`
                 flex flex-col
-                min-w-[280px] max-w-[400px] sm:min-w-[400px]
+                min-w-[240px] max-w-[400px] sm:min-w-[400px]
                 rounded-tl-lg rounded-bl-lg
                 rounded-tr-lg rounded-br-lg
                 ${!moreInfo ? (
@@ -165,7 +165,10 @@ export const ProjectCard = ({
                             {moreInfo ? "Ler Menos" : "Ler Mais"}
                         </button>
                     </div>
-                    <ul className="flex gap-4">
+                    <ul className="
+                        flex flex-col gap-4
+                        sm:flex-row
+                    ">
                         {publicGithub ? (
                             <li className="flex items-center gap-2">
                                 <FaGithub size={20} />
