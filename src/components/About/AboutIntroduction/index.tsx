@@ -9,7 +9,8 @@ export const AboutIntroduction = () => {
             snap-center
         ">
             <div className="
-                flex flex-col justify-between items-start gap-4
+                flex flex-col gap-8
+                sm:justify-between
                 w-full max-w-6xl
             ">
                 <div className="
@@ -18,12 +19,13 @@ export const AboutIntroduction = () => {
                     sm:max-w-[60%]
                 ">
                     <div className="
-                        flex items-center gap-2
+                        flex flex-col items-center gap-4
+                        sm:flex-row 
                     ">
                         <img
                             src="./imgs/willcley.jpg"
                             className="
-                                max-w-16
+                                max-w-20 sm:max-w-16
                                 rounded-full
                                 border-2 border-grey-850
                                 shadow-around-md-blue-400
@@ -66,12 +68,13 @@ export const AboutIntroduction = () => {
                     </div>
                 </div>
                 <div className="
-                    flex flex-col items-end gap-2
-                    lg:flex-row lg:items-center
-                    self-end
+                    flex flex-col-reverse justify-between gap-2
+                    sm:flex-col sm:items-end
+                    lg:flex-row lg:justify-end lg:items-center
+                    h-full sm:h-auto
                 ">
                     <div className="
-                        flex gap-2
+                        flex justify-end gap-2
                     ">
                         <Link
                             href="https://github.com/Willcley"
@@ -107,9 +110,8 @@ export const AboutIntroduction = () => {
                         </Link>
                     </div>
                     <Link className="
-                        duration-200
-                        px-4 py-2
-                        rounded-lg
+                        duration-200 text-center
+                        px-4 py-2 rounded-lg
                         text-blue-400
                         hover:bg-blue-800 hover:bg-opacity-20
                         border-2 border-blue-400
