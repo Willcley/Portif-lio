@@ -1,6 +1,18 @@
 import Link from "next/link";
 
-export const DesktopNavigation = () => {
+export const DesktopNavigation = ({
+    bunner,
+    about,
+    projects,
+    contact,
+}: any) => {
+    const screenScroll = (heightCount: any) => {
+        window?.scrollTo({
+            top: heightCount | 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <div className="
             hidden sm:flex gap-8
@@ -11,42 +23,59 @@ export const DesktopNavigation = () => {
                 text-grey-200
                 sm:justify-between sm:w-auto
             ">
-                <Link 
-                    href="#about"
+                <button
                     className="
                         duration-200
                         hover:text-orange-400
                     "
+                    onClick={() => screenScroll(
+                        bunner.current?.clientHeight
+                    )}
                 >
                     Sobre
-                </Link>
-                <Link 
-                    href="#projects"
+                </button>
+                <button
                     className="
                         duration-200
                         hover:text-orange-400
                     "
+                    onClick={() => screenScroll(
+                        bunner.current?.clientHeight
+                        + about.current?.clientHeight
+                        + 2
+                    )}
                 >
                     Projetos
-                </Link>
-                <Link 
-                    href="#contact"
+                </button>
+                <button
                     className="
                         duration-200
                         hover:text-orange-400
                     "
+                    onClick={() => screenScroll(
+                        bunner.current?.clientHeight
+                        + about.current?.clientHeight
+                        + 2
+                        + projects.current?.clientHeight
+                    )}
                 >
                     Contato
-                </Link>
-                {/* <Link 
-                    href=""
+                </button>
+                {/* <button
                     className="
                         duration-200
                         hover:text-orange-400
                     "
+                    onClick={() => screenScroll(
+                        bunner.current?.clientHeight
+                        + about.current?.clientHeight
+                        + 2
+                        + projects.current?.clientHeight
+                        + contact.current?.clientHeight
+                    )}
                 >
                     Certificados
-                </Link> */}
+                </button> */}
             </nav>
             <div className="
                 hidden flex-col justify-between

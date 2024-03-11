@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useState } from "react";
 import {
     MdOutlineMenu,
@@ -6,12 +5,24 @@ import {
 } from "react-icons/md";
 import {useOutclick} from "@/hooks/useOutclick";
 
-export const MobileNavigation = () => {
+export const MobileNavigation = ({
+    bunner,
+    about,
+    projects,
+    contact,
+}: any) => {
     const [ openNav, setOpenNav ] = useState(false);
 
     const navRef = useOutclick(() => {
         setOpenNav(false);
     });
+
+    const screenScroll = (heightCount: any) => {
+        window?.scrollTo({
+            top: heightCount | 0,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <div className="
@@ -57,54 +68,79 @@ export const MobileNavigation = () => {
                         h-full
                         border border-black
                     ">
-                        <Link
-                            href="#about"
+                        <button
                             className="
                                 flex justify-center items-center
                                 w-[40vw] h-full
                                 hover:bg-opacity-10
                                 hover:bg-grey-900
                             "
-                            onClick={() => setOpenNav(false)}
+                            onClick={() => {
+                                setOpenNav(false)
+                                screenScroll(
+                                    bunner.current?.clientHeight
+                                )
+                            }}
                         >
                             Sobre
-                        </Link>
-                        <Link
-                            href="#projects"
+                        </button>
+                        <button
                             className="
                                 flex justify-center items-center
                                 w-[40vw] h-full
                                 hover:bg-opacity-10
                                 hover:bg-grey-900
                             "
-                            onClick={() => setOpenNav(false)}
+                            onClick={() => {
+                                setOpenNav(false)
+                                screenScroll(
+                                    bunner.current?.clientHeight
+                                    + about.current?.clientHeight
+                                    + 2
+                                )
+                            }}
                         >
                             Projetos
-                        </Link>
-                        <Link
-                            href="#contact"
+                        </button>
+                        <button
                             className="
                                 flex justify-center items-center
                                 w-[40vw] h-full
                                 hover:bg-opacity-10
                                 hover:bg-grey-900
                             "
-                            onClick={() => setOpenNav(false)}
+                            onClick={() => {
+                                setOpenNav(false)
+                                screenScroll(
+                                    bunner.current?.clientHeight
+                                    + about.current?.clientHeight
+                                    + 2
+                                    + projects.current?.clientHeight
+                                )
+                            }}
                         >
                             Contato
-                        </Link>
-                        {/* <Link
-                            href=""
+                        </button>
+                        {/* <button
                             className="
                                 flex justify-center items-center
                                 w-[40vw] h-full
                                 hover:bg-opacity-10
                                 hover:bg-grey-900
                             "
-                            onClick={() => setOpenNav(false)}
+                            onClick={() => {
+                                setOpenNav(false)
+                                screenScroll(
+                                    bunner.current?.clientHeight
+                                    + about.current?.clientHeight
+                                    + 2
+                                    + projects.current?.clientHeight
+                                    + contact.current?.clientHeight
+                                )
+                            }}
                         >
                             Certificados
-                        </Link> */}
+                        </button> */}
                     </nav>
                     <div className="
                         hidden justify-between

@@ -38,7 +38,7 @@ export const ProjectList = ({ projectList }: any) => {
                     duration-300
                     flex gap-48
                     px-[50%]
-                    w-screen
+                    w-full
                     overflow-x-hidden
                     snap-x snap-mandatory
                     list-none
