@@ -1,5 +1,6 @@
 import { TechCard } from "./TechCard";
 import { techList } from "../../../databases/techList";
+import { toolList } from "../../../databases/toolList";
 
 export const AboutTech = () => {
     return (
@@ -9,23 +10,42 @@ export const AboutTech = () => {
             snap-center
         ">
             <div className="
+                flex flex-col gap-8
                 w-full max-w-6xl
             ">
                 <div className="
-                    flex flex-col items-center gap-4
-                    px-4 py-2 max-w-xl
-                    border-2 rounded-xl border-blue-400
+                    flex flex-col gap-4
                 ">
+                    <h2 className="text-xl text-orange-400">
+                        Tecnologias
+                    </h2>
                     <div className="
-                        flex flex-col items-center gap-2
+                        flex flex-col gap-2
                     ">
-                        <h3 className="text-xl font-bold">Tecnologias:</h3>
                         <ul className="
-                            flex justify-center gap-2 flex-wrap pb-2 px-2
+                            flex gap-2 flex-wrap pb-2 px-2
                         ">
                             {techList.length > 0 ? techList.map((tech) => (
-                                <TechCard tech={tech} key={tech.title} />
+                                <TechCard key={tech.title} tech={tech} />
                             )) : <p>Lista de tecnologias não encontrada!</p>}
+                        </ul>
+                    </div>
+                </div>
+                <div className="
+                    flex flex-col gap-4
+                ">
+                    <h2 className="text-xl text-orange-400">
+                        Ferramentas
+                    </h2>
+                    <div className="
+                        flex flex-col gap-2
+                    ">
+                        <ul className="
+                            flex gap-2 flex-wrap pb-2 px-2
+                        ">
+                            {toolList.length > 0 ? toolList.map((tool) => (
+                                <TechCard tech={tool} key={tool.title} />
+                            )) : <p>vazio...</p>}
                         </ul>
                     </div>
                 </div>

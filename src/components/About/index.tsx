@@ -28,7 +28,7 @@ export const About = ({ about }: any) => {
             >
                 <AboutIntroduction />
                 <AboutTexts />
-                {/* <AboutTech /> */}
+                <AboutTech />
                 {/* <AboutAbilities /> */}
             </ul>
             <nav className="
@@ -57,14 +57,14 @@ export const About = ({ about }: any) => {
                         screenAbout={screenAbout}
                         setScreenAbout={setScreenAbout}
                     />
-                    {/* <AboutNavButton
+                    <AboutNavButton
                         text="tecnologias"
                         value="tech"
                         position={2}
                         scrollRef={aboutScroll}
                         screenAbout={screenAbout}
                         setScreenAbout={setScreenAbout}
-                    /> */}
+                    />
                     {/* <AboutNavButton
                         text="habilidades"
                         value="ability"
