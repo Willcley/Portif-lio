@@ -1,9 +1,9 @@
 import { ProjectList } from "./ProjectList";
 import { kenzieProjectList } from "../../databases/kenzieProjectList";
 
-export const Projects = () => {
+export const Projects = ({ projects }: any) => {
     return (
-        <section id="projects" className="
+        <section ref={projects} className="
             flex flex-col items-center gap-8
             px-8 py-12
             bg-grey-900

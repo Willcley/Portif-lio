@@ -3,9 +3,9 @@ import { ContactCard } from "./ContactCard";
 import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
-export const Contact = () => {
+export const Contact = ({ contact }: any) => {
     return (
-        <section id="contact" className="
+        <section ref={contact} className="
             flex justify-center
             min-w-full p-8
         ">
