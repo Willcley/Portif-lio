@@ -75,30 +75,6 @@ export const About = ({ about }: any) => {
                     /> */}
                 </ul>
             </nav>
-            <div className="
-                absolute top-0 right-0
-                z-0
-                w-2/5 h-full
-            ">
-                <div className="
-                    relative
-                    duration-200
-                    w-full h-full
-                ">
-                    <Image
-                        src="/imgs/codeWallpaper.jpg"
-                        alt="code"
-                        layout="fill"
-                        objectFit="cover"
-                        sizes="full"
-                    />
-                    <div className="
-                        absolute top-0 right-0
-                        min-w-full min-h-full z-10
-                        bg-gradient-to-r from-grey-850 to-transparent
-                    "></div>
-                </div>
-            </div>
         </section>
     );
 };

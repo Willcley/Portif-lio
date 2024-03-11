@@ -5,7 +5,7 @@
 @layer components {
   .body {
     @apply
-      bg-grey-850
+      bg-gradient-to-t from-grey-900 to-grey-850
       text-grey-100
       scroll-smooth
     ;
