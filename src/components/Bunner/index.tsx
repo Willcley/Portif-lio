@@ -36,9 +36,10 @@ export const Bunner = ({ bunner }: any) => {
                 <Image
                     src="/imgs/abstractWaveBlue.jpg"
                     alt="code"
-                    layout="fill"
-                    objectFit="cover"
+                    priority
+                    fill
                     sizes="full"
+                    className="object-cover"
                 />
             </div>
         </section>
