@@ -1,22 +1,23 @@
-import {
-    FaReact,
-    FaHtml5,
-    FaSass,
-    FaPython,
-    FaGitAlt,
-    FaNodeJs,
-} from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import {
+    FaHtml5,
+    FaNodeJs,
+    FaPython,
+    FaReact,
+    FaSass,
+} from "react-icons/fa";
+import { IoLogoCss3 } from "react-icons/io";
+import { PiBracketsCurly } from "react-icons/pi";
+import {
     SiAxios,
-    SiZod,
-    SiExpress,
     SiDjango,
+    SiExpress,
+    SiNestjs,
     SiPostgresql,
     SiTailwindcss,
+    SiZod,
 } from "react-icons/si";
-import { PiBracketsCurly } from "react-icons/pi";
+import { TbBrandNextjs } from "react-icons/tb";
 
 export const techList = [
     {
@@ -25,13 +26,18 @@ export const techList = [
         link: "https://react.dev",
     },
     {
+        icon: <TbBrandNextjs size={40} />,
+        title: "Nextjs",
+        link: "https://nextjs.org",
+    },
+    {
         icon: <FaHtml5 size={40} />,
-        title: "Html",
+        title: "Html5",
         link: "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
     },
     {
         icon: <IoLogoCss3 size={40} />,
-        title: "Css",
+        title: "Css3",
         link: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
     },
     {
@@ -45,6 +51,11 @@ export const techList = [
         link: "https://tailwindcss.com",
     },
     {
+        icon: <SiAxios size={40} />,
+        title: "Axios",
+        link: "https://axios-http.com/ptbr/docs/intro",
+    },
+    {
         icon: <BiLogoJavascript size={40} />,
         title: "Javascript",
         link: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
@@ -55,19 +66,9 @@ export const techList = [
         link: "https://www.typescriptlang.org",
     },
     {
-        icon: <SiAxios size={40} />,
-        title: "Axios",
-        link: "https://axios-http.com/ptbr/docs/intro",
-    },
-    {
         icon: <SiZod size={40} />,
         title: "Zod",
         link: "https://zod.dev",
-    },
-    {
-        icon: <FaGitAlt size={40} />,
-        title: "Git",
-        link: "https://git-scm.com",
     },
     {
         icon: <FaNodeJs size={40} />,
@@ -78,6 +79,11 @@ export const techList = [
         icon: <SiExpress size={40} />,
         title: "Express",
         link: "https://expressjs.com/pt-br/",
+    },
+    {
+        icon: <SiNestjs size={40} />,
+        title: "Nestjs",
+        link: "https://nestjs.com",
     },
     {
         icon: <PiBracketsCurly size={40} />,
