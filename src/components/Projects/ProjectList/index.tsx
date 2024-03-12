@@ -108,7 +108,7 @@ export const ProjectList = ({ projectList }: any) => {
                                     hidden={true}
                                     className="peer"
                                     checked={cardNumber === i ? true : false}
-                                    onClick={() => setCardNumber(i)}
+                                    onChange={() => setCardNumber(i)}
                                 />
                                 <label
                                     htmlFor={`radio${i}`}
