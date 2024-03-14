@@ -14,7 +14,7 @@ export const Header = ({
             flex justify-center
             px-8 py-4
             min-w-full w-full 
-            bg-grey-900
+            bg-grey-100 dark:bg-grey-900
             border-b-2 border-blue-400
         ">
             <div className="
@@ -22,6 +22,8 @@ export const Header = ({
                 w-full max-w-6xl
             ">
                 <h2 className="
+                    text-grey-900
+                    dark:text-grey-100
                     text-2xl font-bold
                 ">
                     Willcley Melo

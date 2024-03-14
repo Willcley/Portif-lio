@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { DarkMode } from "../DarkMode";
 
 export const DesktopNavigation = ({
     bunner,
@@ -78,14 +78,12 @@ export const DesktopNavigation = ({
                 </button> */}
             </nav>
             <div className="
-                hidden flex-col justify-between
+                flex flex-col justify-between
                 py-2
             ">
-                <button>
-                    dark
-                </button>
+                <DarkMode />
                 <div className="
-                    flex gap-2
+                    hidden gap-2
                 ">
                     <button>pt</button>
                     <button>en</button>

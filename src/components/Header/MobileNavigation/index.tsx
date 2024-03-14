@@ -4,6 +4,7 @@ import {
     MdClose,
 } from "react-icons/md";
 import {useOutclick} from "@/hooks/useOutclick";
+import { DarkMode } from "../DarkMode";
 
 export const MobileNavigation = ({
     bunner,
@@ -62,11 +63,10 @@ export const MobileNavigation = ({
                         rounded-l-md
                     "
                 >
-                    <nav className="
+                    <div className="
                         duration-200
                         flex flex-col
                         h-full
-                        border border-black
                     ">
                         <button
                             className="
@@ -141,17 +141,15 @@ export const MobileNavigation = ({
                         >
                             Certificados
                         </button> */}
-                    </nav>
+                    </div>
                     <div className="
-                        hidden justify-between
+                        flex justify-between
                         py-2
                         border-t border-grey-900
                     ">
-                        <button>
-                            dark
-                        </button>
+                        <DarkMode />
                         <div className="
-                            flex gap-2
+                            hidden gap-2
                         ">
                             <button>pt</button>
                             <button>en</button>
