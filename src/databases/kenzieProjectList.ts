@@ -1,4 +1,6 @@
-export const kenzieProjectList = [
+import { TProject } from "@/interfaces/projects.interfaces";
+
+export const kenzieProjectList: TProject[] = [
     // {
     //     img: null,
     //     isNew: false,

@@ -1,4 +1,6 @@
-export const projectList = [
+import { TProject } from "@/interfaces/projects.interfaces";
+
+export const projectList: TProject[] = [
     // {
     //     img: null,
     //     isNew: false,

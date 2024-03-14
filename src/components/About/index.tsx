@@ -2,7 +2,6 @@ import Image from "next/image";
 import { AboutTexts } from "./AboutTexts";
 import { AboutTech } from "./AboutTech";
 import { AboutIntroduction } from "./AboutIntroduction";
-import { AboutAbilities } from "./AboutAbilities";
 import { useRef, useState } from "react";
 import { AboutNavButton } from "./AboutNavButton";
 
@@ -29,7 +28,6 @@ export const About = ({ about }: any) => {
                 <AboutIntroduction />
                 <AboutTexts />
                 <AboutTech />
-                {/* <AboutAbilities /> */}
             </ul>
             <nav className="
                 z-10
@@ -65,14 +63,6 @@ export const About = ({ about }: any) => {
                         screenAbout={screenAbout}
                         setScreenAbout={setScreenAbout}
                     />
-                    {/* <AboutNavButton
-                        text="habilidades"
-                        value="ability"
-                        position={3}
-                        scrollRef={aboutScroll}
-                        screenAbout={screenAbout}
-                        setScreenAbout={setScreenAbout}
-                    /> */}
                 </ul>
             </nav>
         </section>
