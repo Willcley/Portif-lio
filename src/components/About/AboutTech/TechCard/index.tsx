@@ -7,8 +7,18 @@ export const TechCard = ({ tech }: any) => {
             text-grey-200 text-opacity-80
             hover:text-blue-400
         ">
-            <Link target="_blank" href={tech.link}>
+            <Link
+                href={tech.link}
+                target="_blank"
+                className="
+                    flex flex-col justify-between items-center
+                    h-full
+                "
+            >
                 {tech.icon}
+                <p className="text-xs">
+                    {tech.title}
+                </p>
             </Link>
         </li>
     );
