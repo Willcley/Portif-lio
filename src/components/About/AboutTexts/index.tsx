@@ -121,7 +121,7 @@ export const AboutTexts = () => {
                         <h2 className="
                             text-xl text-orange-600
                         ">Localização</h2>
-                        <p className="
+                        <div className="
                             flex gap-1
                             sm:self-end
                             text-grey-300
@@ -129,7 +129,7 @@ export const AboutTexts = () => {
                             <p>Brasil |</p>
                             <p className="hidden sm:block">Rio de Janeiro -</p>
                             <p>RJ | Duque de Caxias</p>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

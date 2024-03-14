@@ -111,7 +111,7 @@ export const AboutIntroduction = () => {
                     </div>
                     <Link className="
                         duration-200 text-center
-                        px-4 py-2 rounded-lg
+                        mx-2 px-4 py-2 rounded-lg
                         text-blue-400
                         hover:bg-blue-800 hover:bg-opacity-20
                         border-2 border-blue-400
