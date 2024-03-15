@@ -11,16 +11,13 @@ export const About = ({ about }: any) => {
 
     return (
         <section ref={about} className="
-            relative
-            flex
+            relative flex
             min-w-full min-h-[600px]
         ">
             <ul 
                 ref={aboutScroll}
                 className="
-                    z-10
-                    flex gap-8
-                    p-8
+                    z-10 flex gap-8 p-8
                     overflow-x-hidden
                     snap-x snap-mandatory
                 "
@@ -30,14 +27,14 @@ export const About = ({ about }: any) => {
                 <AboutTech />
             </ul>
             <nav className="
-                z-10
-                absolute bottom-0
+                absolute bottom-0 z-10
                 sm:w-full
             ">
                 <ul className="
                     flex flex-col items-start
                     sm:flex-row sm:justify-center sm:gap-4
-                    bg-gradient-to-tr from-grey-850
+                    bg-gradient-to-tr from-grey-blue-200
+                    dark:bg-gradient-to-tr dark:from-grey-blue-900
                 ">
                     <AboutNavButton
                         text="início"

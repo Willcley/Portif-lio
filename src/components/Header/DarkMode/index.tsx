@@ -10,9 +10,8 @@ export const DarkMode = () => {
                 className="
                     flex
                     rounded-full
-                    bg-gradient-to-t from-grey-200 to-grey-100
-                    dark:bg-gradient-to-t dark:from-grey-900 dark:to-grey-850
-                    text-orange-400
+                    bg-grey-blue-100
+                    dark:bg-grey-900
                     border-2 border-grey-900
                     dark:border-grey-200
                 "
@@ -25,14 +24,20 @@ export const DarkMode = () => {
                 <div className="w-12">
                     <div className={`
                         duration-200 p-1 w-6
-                        ${theme === "dark" ? "ml-6" : ""}
+                        dark:ml-6
                         rounded-full
-                        bg-blue-400
-                        text-grey-100 dark:text-grey-900
+                        bg-blue-500
+                        dark:bg-blue-400
+                        text-grey-blue-100 dark:text-grey-900
                     `}>
-                        {theme === "dark"
-                        ? <IoMoon size={16} />
-                        : <IoSunny size={16} />}
+                        <IoSunny
+                            size={16}
+                            className="dark:hidden"
+                        />
+                        <IoMoon
+                            size={16}
+                            className="hidden dark:block"
+                        />
                     </div>
                 </div>
             </button>

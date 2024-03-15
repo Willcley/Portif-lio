@@ -4,8 +4,10 @@ export const TechCard = ({ tech }: any) => {
     return (
         <li title={tech.title} className="
             cursor-pointer duration-200
-            text-grey-200 text-opacity-80
-            hover:text-blue-400
+            text-grey-800 text-opacity-60
+            dark:text-grey-200 dark:text-opacity-80
+            hover:text-blue-500
+            dark:hover:text-blue-400
         ">
             <Link
                 href={tech.link}
@@ -16,7 +18,9 @@ export const TechCard = ({ tech }: any) => {
                 "
             >
                 {tech.icon}
-                <p className="text-xs">
+                <p className="
+                    text-xs
+                ">
                     {tech.title}
                 </p>
             </Link>

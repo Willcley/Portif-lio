@@ -72,14 +72,15 @@ export const ProjectCard = ({
                 ${!moreInfo ? (
                     "lg:rounded-tr-lg lg:rounded-br-lg"
                 ) : "lg:rounded-tr-none lg:rounded-br-none"}
-                bg-grey-850
-                border-b-2 border-b-blue-800
-                border-l-2 border-l-blue-400
+                bg-gradient-to-r from-blue-200 to-blue-100
+                dark:from-grey-blue-900 dark:to-grey-blue-800
+                border-b-2 border-b-blue-200
+                dark:border-b-grey-blue-800
             `}>
                 <div className="
                     relative
                     flex justify-center min-h-48 max-h-48
-                    bg-grey-900 rounded-lg
+                    rounded-lg
                 ">
                     {img ? (
                         <img className={`
@@ -93,39 +94,43 @@ export const ProjectCard = ({
                             w-full h-48
                             rounded-tl-lg rounded-tr-lg
                             ${!moreInfo ? "lg:rounded-tr-lg" : "lg:rounded-tr-none"}
-                            bg-grey-800
                         `}>
                             <p className={`
                                 flex justify-center items-center
-                                duration-200
                                 w-full ${moreInfo ? "h-full" : "h-16"}
-                                bg-grey-300 bg-opacity-20
-                                text-lg font-bold
-                            `}>Sem imagem</p>
+                                w-full ${moreInfo ? "rounded-tl-lg" : null}
+                                text-4xl font-bold italic
+                                text-blue-300 dark:text-grey-blue-700
+                            `}>
+                                Sem imagem
+                            </p>
                         </div>
                     )}
                 </div>
                 <div className="
                     flex flex-col justify-between gap-4 p-4
                     min-h-[240px] h-full
+                    text-grey-900 dark:text-grey-100
                 ">
                     <div className="flex flex-col gap-4">
                         <div>
                             <div className="flex items-center gap-4">
                                 <h3 className="text-2xl font-bold">{title}</h3>
                                 <span className="
-                                    bg-blue-800 px-4 py-0.5
+                                    px-4 py-0.5
                                     rounded
+                                    bg-blue-300 dark:bg-blue-800
                                     text-sm font-bold
                                 " hidden={!isNew}>
                                     New
                                 </span>
                             </div>
                             {kenzie ? (
-                                <p className="text-sm text-grey-300">
+                                <p className="text-sm text-grey-700 dark:text-grey-300">
                                     {"Projeto criado em "}
                                     <Link className="
-                                        no-undeline text-blue-400
+                                        no-undeline
+                                        text-blue-500 dark:text-blue-400
                                         hover:underline
                                     " target="_blank" href="https://kenzie.com.br/">
                                         Kenzie Academy Brasil
@@ -144,7 +149,7 @@ export const ProjectCard = ({
                                 <>
                                     Framework:
                                     <span className="
-                                        bg-blue-900 text-grey-200
+                                        bg-blue-300 dark:bg-blue-800
                                         rounded-md px-2 py-0.5
                                     ">
                                         {framework}
@@ -157,8 +162,9 @@ export const ProjectCard = ({
                                 hidden lg:block
                                 px-4 py-1
                                 rounded
-                                bg-grey-300 bg-opacity-20
-                                hover:bg-opacity-40
+                                bg-blue-300 dark:bg-blue-800
+                                bg-opacity-20 hover:bg-opacity-40
+                                dark:bg-opacity-20 dark:hover:bg-opacity-40
                             "
                             onClick={MoreInfo}
                         >
@@ -196,9 +202,11 @@ export const ProjectCard = ({
                 ${moreInfo ? "p-4" : "p-0"}
                 ${moreInfo ? "w-[600px]" : "w-0"}
                 rounded-tr-lg rounded-br-lg
-                bg-grey-300 bg-opacity-20
+                bg-gradient-to-r from-blue-100 to-grey-blue-100
+                dark:from-grey-blue-800 dark:to-grey-900
                 backdrop-blur-sm
-                border-b-2 border-grey-100 border-opacity-40
+                border-b-2 border-opacity-40
+                border-blue-200 dark:border-grey-blue-800
             `}>
                 <div className={`
                     relative
@@ -211,19 +219,22 @@ export const ProjectCard = ({
                     <span className="
                         px-4 py-1
                         rounded-md
-                        bg-blue-900 bg-opacity-40
+                        bg-blue-400 bg-opacity-20
+                        dark:bg-blue-500 dark:bg-opacity-20
+                        text-grey-900 dark:text-grey-100
                     ">
                         {type}
                     </span>
                     <p className={`
                         text-justify
                         p-8 h-full
-                        text-grey-200
+                        text-grey-800 dark:text-grey-200
                     `}>
                         {description}
                     </p>
                     <p className="
                         absolute bottom-0 right-0
+                        text-grey-900 dark:text-grey-100
                     ">
                         {finishedAt}
                     </p>
@@ -235,18 +246,23 @@ export const ProjectCard = ({
                     flex flex-col items-center gap-4
                 `}>
                     <hr className="
-                        w-full
-                        border border-grey-300 border-opacity-40"
+                        w-full border
+                        border-grey-200 dark:border-grey-800"
                     />
-                    <h4 className="mb-4 text-grey-100">Tecnologias:</h4>
+                    <h4 className="
+                        mb-4
+                        text-grey-900 dark:text-grey-100
+                    ">
+                        Tecnologias:
+                    </h4>
                     <ul className="
                         flex justify-center gap-2 flex-wrap
-                        text-grey-300
                     ">
                         {techList?.map((tech: string) => (
                             <li className="
-                                bg-blue-900 text-grey-200
-                                rounded-md px-2 py-0.5
+                                px-2 py-0.5 rounded-md
+                                bg-blue-300 dark:bg-blue-800
+                                text-grey-900 dark:text-grey-100
                             " key={tech}>
                                 {tech}
                             </li>

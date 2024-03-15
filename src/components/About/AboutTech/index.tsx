@@ -16,7 +16,10 @@ export const AboutTech = () => {
                 <div className="
                     flex flex-col gap-4
                 ">
-                    <h2 className="text-xl text-orange-400">
+                    <h2 className="
+                        text-xl text-purple-700
+                        dark:text-orange-400
+                    ">
                         Tecnologias
                     </h2>
                     <div className="
@@ -34,7 +37,10 @@ export const AboutTech = () => {
                 <div className="
                     flex flex-col gap-4
                 ">
-                    <h2 className="text-xl text-orange-400">
+                    <h2 className="
+                        text-xl text-purple-700
+                        dark:text-orange-400
+                    ">
                         Ferramentas
                     </h2>
                     <div className="
