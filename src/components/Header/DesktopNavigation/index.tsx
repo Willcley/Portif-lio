@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { DarkMode } from "../DarkMode";
 
 export const DesktopNavigation = ({
     bunner,
@@ -20,13 +20,14 @@ export const DesktopNavigation = ({
             <nav className="
                 flex justify-around items-center gap-8
                 w-full
-                text-grey-200
+                text-grey-800 dark:text-grey-200
                 sm:justify-between sm:w-auto
             ">
                 <button
                     className="
                         duration-200
-                        hover:text-orange-400
+                        hover:text-purple-500
+                        dark:hover:text-orange-400
                     "
                     onClick={() => screenScroll(
                         bunner.current?.clientHeight
@@ -37,7 +38,8 @@ export const DesktopNavigation = ({
                 <button
                     className="
                         duration-200
-                        hover:text-orange-400
+                        hover:text-purple-500
+                        dark:hover:text-orange-400
                     "
                     onClick={() => screenScroll(
                         bunner.current?.clientHeight
@@ -50,7 +52,8 @@ export const DesktopNavigation = ({
                 <button
                     className="
                         duration-200
-                        hover:text-orange-400
+                        hover:text-purple-500
+                        dark:hover:text-orange-400
                     "
                     onClick={() => screenScroll(
                         bunner.current?.clientHeight
@@ -78,14 +81,12 @@ export const DesktopNavigation = ({
                 </button> */}
             </nav>
             <div className="
-                hidden flex-col justify-between
+                flex flex-col justify-between
                 py-2
             ">
-                <button>
-                    dark
-                </button>
+                <DarkMode />
                 <div className="
-                    flex gap-2
+                    hidden gap-2
                 ">
                     <button>pt</button>
                     <button>en</button>

@@ -4,6 +4,7 @@ import {
     MdClose,
 } from "react-icons/md";
 import {useOutclick} from "@/hooks/useOutclick";
+import { DarkMode } from "../DarkMode";
 
 export const MobileNavigation = ({
     bunner,
@@ -32,9 +33,10 @@ export const MobileNavigation = ({
                 className="
                     duration-200
                     flex flex-col
-                    text-grey-200 font-bold
-                    leading-[0]
-                    hover:text-grey-300
+                    font-bold
+                    text-grey-800 dark:text-grey-200
+                    hover:text-grey-700
+                    dark:hover:text-grey-300
                 "
                 onClick={() => setOpenNav(!openNav)}
             >
@@ -47,9 +49,7 @@ export const MobileNavigation = ({
             <div
                 className={`
                     ${!openNav ? "hidden" : null}
-                    ${openNav ? "z-50" : "z-0"}
                     absolute top-16 left-0
-                    duration-200
                     flex justify-end
                     w-full h-screen
                 `}
@@ -58,22 +58,22 @@ export const MobileNavigation = ({
                     ref={navRef}
                     className="
                         h-1/3
-                        bg-grey-100 text-grey-900
+                        bg-grey-900 text-grey-100
+                        dark:bg-grey-blue-100 dark:text-grey-900
                         rounded-l-md
                     "
                 >
-                    <nav className="
+                    <div className="
                         duration-200
                         flex flex-col
                         h-full
-                        border border-black
                     ">
                         <button
                             className="
                                 flex justify-center items-center
                                 w-[40vw] h-full
-                                hover:bg-opacity-10
-                                hover:bg-grey-900
+                                hover:bg-opacity-10 dark:hover:bg-opacity-10
+                                hover:bg-grey-100 dark:hover:bg-grey-900
                             "
                             onClick={() => {
                                 setOpenNav(false)
@@ -88,8 +88,8 @@ export const MobileNavigation = ({
                             className="
                                 flex justify-center items-center
                                 w-[40vw] h-full
-                                hover:bg-opacity-10
-                                hover:bg-grey-900
+                                hover:bg-opacity-10 dark:hover:bg-opacity-10
+                                hover:bg-grey-100 dark:hover:bg-grey-900
                             "
                             onClick={() => {
                                 setOpenNav(false)
@@ -106,8 +106,8 @@ export const MobileNavigation = ({
                             className="
                                 flex justify-center items-center
                                 w-[40vw] h-full
-                                hover:bg-opacity-10
-                                hover:bg-grey-900
+                                hover:bg-opacity-10 dark:hover:bg-opacity-10
+                                hover:bg-grey-100 dark:hover:bg-grey-900
                             "
                             onClick={() => {
                                 setOpenNav(false)
@@ -141,20 +141,19 @@ export const MobileNavigation = ({
                         >
                             Certificados
                         </button> */}
-                    </nav>
-                    <div className="
-                        hidden justify-between
-                        py-2
-                        border-t border-grey-900
-                    ">
-                        <button>
-                            dark
-                        </button>
                         <div className="
-                            flex gap-2
+                            flex justify-between
+                            px-1 py-2
+                            border-t border-opacity-20
+                            border-grey-900
                         ">
-                            <button>pt</button>
-                            <button>en</button>
+                            <DarkMode />
+                            <div className="
+                                hidden gap-2
+                            ">
+                                <button>pt</button>
+                                <button>en</button>
+                            </div>
                         </div>
                     </div>
                 </div>

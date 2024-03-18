@@ -6,7 +6,7 @@ export const Footer = () => {
         <footer className="
             flex justify-center
             min-w-full px-8 py-8
-            bg-grey-900
+            bg-grey-blue-100 dark:bg-grey-900
         ">
             <div className="
                 flex flex-col justify-between items-center gap-4
@@ -19,19 +19,23 @@ export const Footer = () => {
                     sm:items-start
                 ">
                     <h3 className="
-                        text-blue-400
+                        text-blue-500 dark:text-blue-400
                     ">
                         Obrigado pela visita!
                     </h3>
-                    <p className="text-grey-300">
+                    <p className="
+                        text-grey-700
+                        dark:text-grey-300
+                    ">
                         {"Desenvolvido por "}
                         <Link
                             href="https://github.com/Willcley"
                             target="_blank"
                             className="
                                 italic
-                                hover:text-blue-500
                                 hover:underline
+                                hover:text-blue-400
+                                dark:hover:text-blue-500
                             "
                         >
                             Willcley Melo
@@ -47,7 +51,8 @@ export const Footer = () => {
                         title="Instagram"
                         className="
                             hover:cursor-pointer
-                            hover:text-blue-400
+                            hover:text-blue-500
+                            dark:hover:text-blue-400
                         "
                     >
                         <FaInstagram size={40} />
@@ -58,7 +63,8 @@ export const Footer = () => {
                         title="LinkedIn"
                         className="
                             hover:cursor-pointer
-                            hover:text-blue-400
+                            hover:text-blue-500
+                            dark:hover:text-blue-400
                         "
                     >
                         <FaLinkedin size={40} />
