@@ -10,10 +10,12 @@ export const DarkMode = () => {
                 className="
                     flex
                     rounded-full
-                    bg-grey-blue-100
-                    dark:bg-grey-900
-                    border-2 border-grey-900
-                    dark:border-grey-200
+                    outline-none
+                    bg-grey-900 dark:bg-grey-blue-100
+                    border-grey-blue-100 dark:border-grey-900
+                    border-2
+                    sm:bg-grey-blue-100 dark:sm:bg-grey-900
+                    sm:border-grey-900 sm:dark:border-grey-blue-100
                 "
                 onClick={() => {
                     theme === "dark"
