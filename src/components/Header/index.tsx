@@ -9,21 +9,19 @@ export const Header = ({
 }: any) => {
     return (
         <header className="
-            sticky top-0
-            z-40
+            sticky top-0 z-40
             flex justify-center
-            px-8 py-4
-            min-w-full w-full 
-            bg-grey-900
-            border-b-2 border-blue-400
+            px-8 py-4 min-w-full w-full 
+            bg-grey-blue-100 dark:bg-grey-900
+            text-grey-900 dark:text-grey-100
+            border-b-2 border-blue-500
+            dark:border-blue-400
         ">
             <div className="
                 flex justify-between items-center
                 w-full max-w-6xl
             ">
-                <h2 className="
-                    text-2xl font-bold
-                ">
+                <h2 className="text-2xl font-bold">
                     Willcley Melo
                 </h2>
                 <MobileNavigation

@@ -20,10 +20,12 @@ export const AboutNavButton = ({
             <button
                 className={`
                     px-2 py-1
-                    ${screenAbout === value ? "text-orange-400" : null}
                     ${screenAbout === value ? (
-                        "hover:text-orange-500"
-                    ) : "hover:text-orange-600"}
+                        "text-purple-700 dark:text-orange-400"
+                    ) : null}
+                    ${screenAbout === value ? (
+                        "hover:text-purple-600 dark:hover:text-orange-500"
+                    ) : "hover:text-purple-500 dark:hover:text-orange-600"}
                     outline-none
                 `}
                 onClick={changeAbout}

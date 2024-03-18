@@ -27,13 +27,15 @@ export const AboutIntroduction = () => {
                             className="
                                 max-w-20 sm:max-w-16
                                 rounded-full
-                                border-2 border-grey-850
-                                shadow-around-md-blue-400
+                                border-2 border-grey-blue-100
+                                dark:border-grey-blue-900
+                                shadow-around-md-blue-500
+                                dark:shadow-around-md-blue-400
                             "
                         />
                         <h3 className="
-                            text-md font-bold
-                            sm:text-xl
+                            text-md font-bold sm:text-xl
+                            text-grey-800 dark:text-grey-200
                         ">
                             Olá, me chamo Willcley!
                         </h3>
@@ -48,19 +50,22 @@ export const AboutIntroduction = () => {
                         ">
                             {"Desenvolvedor web "}
                             <span className="
-                                text-orange-400
+                                text-purple-500
+                                dark:text-orange-400
                             ">
                                 Full Stack
                             </span>
                         </h1>
-                        <p className="text-grey-300">
+                        <p className="text-grey-700 dark:text-grey-300">
                             desenhista | futuro desenvolvedor de jogos
                         </p>
                     </div>
                     <div className="
                         flex flex-col gap-6 pl-4
-                        text-lg text-grey-200
-                        border-l-2 border-blue-500
+                        text-lg text-grey-800
+                        dark:text-grey-200
+                        border-l-2 border-blue-400
+                        dark:border-blue-500
                     ">
                         <p>
                             Sou desenvolvedor web full stack. Me formei na Kenzie Academy Brasil, onde aprofundei bastante meus conhecimentos em front-end e back-end.
@@ -88,7 +93,8 @@ export const AboutIntroduction = () => {
                                 className="
                                     duration-200
                                     rounded-full
-                                    text-blue-400 hover:text-opacity-60
+                                    text-blue-500 hover:text-opacity-80
+                                    dark:text-blue-400 dark:hover:text-opacity-80
                                 "
                             />
                         </Link>
@@ -104,7 +110,8 @@ export const AboutIntroduction = () => {
                                 className="
                                     duration-200
                                     rounded-md
-                                    text-blue-400 hover:text-opacity-60
+                                    text-blue-500 hover:text-opacity-80
+                                    dark:text-blue-400 dark:hover:text-opacity-80
                                 "
                             />
                         </Link>
@@ -112,9 +119,11 @@ export const AboutIntroduction = () => {
                     <Link className="
                         duration-200 text-center
                         mx-2 px-4 py-2 rounded-lg
-                        text-blue-400
-                        hover:bg-blue-800 hover:bg-opacity-20
-                        border-2 border-blue-400
+                        text-blue-500 dark:text-blue-400
+                        hover:bg-blue-500 hover:bg-opacity-10
+                        dark:hover:bg-blue-800 dark:hover:bg-opacity-20
+                        border-2 border-blue-500
+                        dark:border-blue-400
                         font-bold
                     " target="_blank" href="https://docs.google.com/document/d/1TfzS-0yjA_1KyV32L8kGzLTRGvn2It1cAjYIn_O0Yxw/edit">
                         Currículo
