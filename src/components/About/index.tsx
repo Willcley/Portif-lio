@@ -33,8 +33,7 @@ export const About = ({ about }: any) => {
                 <ul className="
                     flex flex-col items-start
                     sm:flex-row sm:justify-center sm:gap-4
-                    bg-gradient-to-tr from-grey-blue-200
-                    dark:bg-gradient-to-tr dark:from-grey-blue-900
+                    backdrop-blur-sm
                 ">
                     <AboutNavButton
                         text="início"
