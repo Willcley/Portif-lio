@@ -77,9 +77,8 @@ export const ProjectList = ({ projectList }: any) => {
             ">
                 <button
                     className="
+                        relative
                         w-full h-full outline-none
-                        hover:bg-gradient-to-r hover:from-grey-blue-200
-                        dark:hover:bg-gradient-to-r dark:hover:from-grey-blue-800
                     "
                     onClick={() => {
                         if (cardNumber > 0) {
@@ -89,6 +88,14 @@ export const ProjectList = ({ projectList }: any) => {
                         };
                     }}
                 >
+                    <div className="
+                        absolute top-0
+                        w-full h-full
+                        opacity-40
+                        hover:bg-gradient-to-r hover:from-blue-500
+                        dark:hover:bg-gradient-to-r dark:hover:from-blue-400
+                    ">
+                    </div>
                     {`<`}
                 </button>
                 <ul className="
@@ -99,40 +106,47 @@ export const ProjectList = ({ projectList }: any) => {
                 ">
                     {projectList.length > 0 ? projectList.map(
                         (project: TProject, i: number) => (
-                            <li key={`radio${i}`} className="flex">
-                                <input
-                                    id={`radio${i}`}
-                                    type="radio"
-                                    name="radio"
-                                    hidden={true}
-                                    className="peer"
-                                    checked={cardNumber === i ? true : false}
-                                    onChange={() => setCardNumber(i)}
-                                />
-                                <label
-                                    htmlFor={`radio${i}`}
-                                    className="
-                                        cursor-pointer
-                                        duration-200
-                                        p-2 m-2 peer-checked:m-1
-                                        rounded-full
-                                        border-2 border-grey-100
-                                        dark:border-grey-900
-                                        ring-2 ring-blue-500 dark:ring-blue-400
-                                        hover:bg-blue-500 dark:hover:bg-blue-400
-                                        peer-checked:bg-blue-500 peer-checked:p-3
-                                        dark:peer-checked:bg-blue-400
-                                    "
-                                ></label>
+                            <li key={`radio${i}`} className="
+                                flex justify-center items-center
+                                w-8 h-8
+                            ">
+                                <div className="
+                                    flex justify-center items-center
+                                    rounded-full
+                                    border-2 border-grey-100
+                                    dark:border-grey-900
+                                    ring-2 ring-blue-500 dark:ring-blue-400
+                                ">
+                                    <input
+                                        id={`radio${i}`}
+                                        type="radio"
+                                        name="radio"
+                                        hidden={true}
+                                        className="peer"
+                                        checked={cardNumber === i ? true : false}
+                                        onChange={() => setCardNumber(i)}
+                                    />
+                                    <label
+                                        htmlFor={`radio${i}`}
+                                        className="
+                                            cursor-pointer
+                                            duration-200
+                                            p-2 peer-checked:p-3
+                                            rounded-full
+                                            hover:bg-blue-500 dark:hover:bg-blue-400
+                                            peer-checked:bg-blue-500
+                                            dark:peer-checked:bg-blue-400
+                                        "
+                                    ></label>
+                                </div>
                             </li>
                         )
                     ) : null}
                 </ul>
                 <button
                     className="
+                        relative
                         w-full h-full outline-none
-                        hover:bg-gradient-to-l hover:from-grey-blue-200
-                        dark:hover:bg-gradient-to-l dark:hover:from-grey-blue-800
                     "
                     onClick={() => {
                         if (cardNumber < (projectList.length - 1)) {
@@ -142,6 +156,14 @@ export const ProjectList = ({ projectList }: any) => {
                         };
                     }}
                 >
+                    <div className="
+                        absolute top-0
+                        w-full h-full
+                        opacity-40
+                        hover:bg-gradient-to-l hover:from-blue-500
+                        dark:hover:bg-gradient-to-l dark:hover:from-blue-400
+                    ">
+                    </div>
                     {`>`}
                 </button>
             </div>

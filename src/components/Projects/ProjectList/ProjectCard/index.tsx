@@ -196,78 +196,81 @@ export const ProjectCard = ({
             </div>
             <div className={`
                 hidden lg:flex
-                relative
-                flex-col justify-between
-                duration-200 ease-linear
-                ${moreInfo ? "p-4" : "p-0"}
-                ${moreInfo ? "w-[600px]" : "w-0"}
+                border-b-2 border-opacity-40
+                border-blue-200 dark:border-grey-blue-800
                 rounded-tr-lg rounded-br-lg
                 bg-gradient-to-r from-blue-100 to-grey-blue-100
                 dark:from-grey-blue-800 dark:to-grey-900
                 backdrop-blur-sm
-                border-b-2 border-opacity-40
-                border-blue-200 dark:border-grey-blue-800
             `}>
                 <div className={`
                     relative
-                    ${!contentInfo ? "hidden" : null}
-                    ${opacityInfo ? "opacity-100" : "opacity-0"}
-                    duration-200
-                    flex flex-col items-center text-center gap-8
-                    h-full max-h-full
+                    flex flex-col justify-between
+                    duration-200 ease-linear
+                    ${moreInfo ? "p-4" : "p-0"}
+                    ${moreInfo ? "w-[600px]" : "w-0"}
                 `}>
-                    <span className="
-                        px-4 py-1
-                        rounded-md
-                        bg-blue-400 bg-opacity-20
-                        dark:bg-blue-500 dark:bg-opacity-20
-                        text-grey-900 dark:text-grey-100
-                    ">
-                        {type}
-                    </span>
-                    <p className={`
-                        text-justify
-                        p-8 h-full
-                        text-grey-800 dark:text-grey-200
+                    <div className={`
+                        relative
+                        ${!contentInfo ? "hidden" : null}
+                        ${opacityInfo ? "opacity-100" : "opacity-0"}
+                        duration-200
+                        flex flex-col items-center text-center gap-8
+                        h-full max-h-full
                     `}>
-                        {description}
-                    </p>
-                    <p className="
-                        absolute bottom-0 right-0
-                        text-grey-900 dark:text-grey-100
-                    ">
-                        {finishedAt}
-                    </p>
-                </div>
-                <div className={`
-                    ${!contentInfo ? "hidden" : null}
-                    ${opacityInfo ? "opacity-100" : "opacity-0"}
-                    duration-300
-                    flex flex-col items-center gap-4
-                `}>
-                    <hr className="
-                        w-full border
-                        border-grey-200 dark:border-grey-800"
-                    />
-                    <h4 className="
-                        mb-4
-                        text-grey-900 dark:text-grey-100
-                    ">
-                        Tecnologias:
-                    </h4>
-                    <ul className="
-                        flex justify-center gap-2 flex-wrap
-                    ">
-                        {techList?.map((tech: string) => (
-                            <li className="
-                                px-2 py-0.5 rounded-md
-                                bg-blue-300 dark:bg-blue-800
-                                text-grey-900 dark:text-grey-100
-                            " key={tech}>
-                                {tech}
-                            </li>
-                        ))}
-                    </ul>
+                        <span className="
+                            px-4 py-1
+                            rounded-md
+                            bg-blue-400 bg-opacity-20
+                            dark:bg-blue-500 dark:bg-opacity-20
+                            text-grey-900 dark:text-grey-100
+                        ">
+                            {type}
+                        </span>
+                        <p className={`
+                            text-justify
+                            p-8 h-full
+                            text-grey-800 dark:text-grey-200
+                        `}>
+                            {description}
+                        </p>
+                        <p className="
+                            absolute bottom-0 right-0
+                            text-grey-900 dark:text-grey-100
+                        ">
+                            {finishedAt}
+                        </p>
+                    </div>
+                    <div className={`
+                        ${!contentInfo ? "hidden" : null}
+                        ${opacityInfo ? "opacity-100" : "opacity-0"}
+                        duration-300
+                        flex flex-col items-center gap-4
+                    `}>
+                        <hr className="
+                            w-full border
+                            border-blue-200 dark:border-grey-blue-800"
+                        />
+                        <h4 className="
+                            mb-4
+                            text-grey-900 dark:text-grey-100
+                        ">
+                            Tecnologias:
+                        </h4>
+                        <ul className="
+                            flex justify-center gap-2 flex-wrap
+                        ">
+                            {techList?.map((tech: string) => (
+                                <li className="
+                                    px-2 py-0.5 rounded-md
+                                    bg-blue-300 dark:bg-blue-800
+                                    text-grey-900 dark:text-grey-100
+                                " key={tech}>
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </li>
