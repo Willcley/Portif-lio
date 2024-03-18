@@ -6,7 +6,7 @@
   .body {
     @apply
       bg-gradient-to-t from-grey-blue-200 to-grey-blue-100
-      dark:bg-gradient-to-t dark:from-grey-900 dark:to-grey-blue-900
+      dark:bg-gradient-to-t dark:from-grey-blue-900 dark:to-grey-900
       text-grey-900 dark:text-grey-100
       scroll-smooth
     ;
