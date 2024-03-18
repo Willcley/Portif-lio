@@ -17,12 +17,12 @@ export const Contact = ({ contact }: any) => {
                 <div className="flex flex-col gap-4 py-8">
                     <h2 className="text-2xl font-bold">
                         {"Vamos conversar e "}
-                        <span className="text-orange-400">
+                        <span className="text-purple-500 dark:text-orange-400">
                             desenvolver nossa criatividade
                         </span>
                         {" juntos"}
                     </h2>
-                    <p className="text-lg text-grey-200">
+                    <p className="text-lg text-grey-800 dark:text-grey-200">
                         Entre em contato comigo, caso tenha interesse em me contratar para desenvolver-mos um projeto juntos.
                     </p>
                 </div>
